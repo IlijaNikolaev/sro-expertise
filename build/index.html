@@ -29,8 +29,9 @@
             </div>
             <div class="popup__content">
                 <p class="popup__title">Обратный звонок</p>
-                <form action="#" method="post"><input class="popup__input" type="text" placeholder="Ваше имя">
-                    <input required="" class="popup__input" type="tel" placeholder="Ваш телефон">
+                <form action="#" method="post" id="callback-form">
+                    <input class="popup__input" type="text" placeholder="Ваше имя" name="callback-name">
+                    <input required="" class="popup__input" type="tel" placeholder="Ваш телефон" name="callback-phone">
                     <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a href="#">персональных
                         данных</a></label>
                     <button class="popup__btn main-btn" type="submit">Отправить</button>
@@ -190,14 +191,14 @@
             <span>Рассчитайте стоимость </span>
             <span>вступления в СРО в вашем регионе</span>
         </h2>
-        <form method="post" action="#" class="content calculate">
+        <form method="post" action="#" class="content calculate" id="calculate-form">
             <div class="calculate__wrapper">
                 <div class="calculate__question">
                     <p class="calculate__header">
                         <span class="calculate__number-border"><span class="calculate__number">1</span></span>
                         Вы находитесь в городе:
                     </p>
-                    <button class="calculate__city">Санкт-Петербург</button>
+                    <input class="calculate__city" type="text" placeholder="Санкт-петербург" name="calculate-city">
                 </div>
                 <div class="calculate__question">
                     <p class="calculate__header">
@@ -206,7 +207,7 @@
                     </p>
                     <input class="default-input" type="radio" name="public_procurement" value="yes" id="pub_yes">
                     <label class="custom-input calculate__label" for="pub_yes"><span class="custom-input__btn custom-input__btn--radio"></span>Да</label>
-                    <input class="default-input" type="radio" name="public_procurement" value="yes" id="pub_no">
+                    <input class="default-input" type="radio" name="public_procurement" value="no" id="pub_no">
                     <label class="custom-input calculate__label" for="pub_no"><span class="custom-input__btn custom-input__btn--radio"></span>Нет</label>
                 </div>
                 <div class="calculate__question">
@@ -214,11 +215,11 @@
                         <span class="calculate__number-border"><span class="calculate__number">3</span></span>
                         Особые условия
                     </p>
-                    <input class="default-input" type="radio" name="conditions" value="yes" id="normal_conditions">
+                    <input class="default-input" type="radio" name="conditions" value="normal_conditions" id="normal_conditions">
                     <label class="custom-input calculate__label" for="normal_conditions"><span class="custom-input__btn custom-input__btn--radio"></span>Обычные</label>
-                    <input class="default-input" type="radio" name="conditions" value="yes" id="danger_conditions">
+                    <input class="default-input" type="radio" name="conditions" value="danger_conditions" id="danger_conditions">
                     <label class="custom-input calculate__label" for="danger_conditions"><span class="custom-input__btn custom-input__btn--radio"></span>Особоопасные</label>
-                    <input class="default-input" type="radio" name="conditions" value="yes" id="atomic_conditions">
+                    <input class="default-input" type="radio" name="conditions" value="atomic_conditions" id="atomic_conditions">
                     <label class="custom-input calculate__label" for="atomic_conditions"><span class="custom-input__btn custom-input__btn--radio"></span>Атомные</label>
                 </div>
                 <div class="calculate__question">
@@ -226,11 +227,11 @@
                         <span class="calculate__number-border"><span class="calculate__number">4</span></span>
                         Выберите тип СРО
                     </p>
-                    <input class="default-input" type="checkbox" name="sro_type" value="yes" id="sro_builder">
+                    <input class="default-input" type="checkbox" name="sro_type" value="sro_builder" id="sro_builder">
                     <label class="custom-input calculate__label" for="sro_builder"><span class="custom-input__btn custom-input__btn"></span>СРО строителей</label>
-                    <input class="default-input" type="checkbox" name="sro_type" value="yes" id="sro_planner">
+                    <input class="default-input" type="checkbox" name="sro_type" value="sro_planner" id="sro_planner">
                     <label class="custom-input calculate__label" for="sro_planner"><span class="custom-input__btn custom-input__btn"></span>СРО проектировщиков</label>
-                    <input class="default-input" type="checkbox" name="sro_type" value="yes" id="sro_prospector">
+                    <input class="default-input" type="checkbox" name="sro_type" value="sro_prospector" id="sro_prospector">
                     <label class="custom-input calculate__label" for="sro_prospector"><span class="custom-input__btn custom-input__btn"></span>СРО изыскателей</label>
                 </div>
                 <div class="calculate__question">
@@ -238,11 +239,11 @@
                         <span class="calculate__number-border"><span class="calculate__number">5</span></span>
                         Сколько необходимо <br> специалистов для нац.реестра?
                     </p>
-                    <input class="default-input" type="radio" name="persons" value="yes" id="one_person">
+                    <input class="default-input" type="radio" name="persons" value="one_person" id="one_person">
                     <label class="custom-input calculate__label" for="one_person"><span class="custom-input__btn custom-input__btn--radio"></span>1 человек</label>
-                    <input class="default-input" type="radio" name="persons" value="yes" id="two_person">
+                    <input class="default-input" type="radio" name="persons" value="two_person" id="two_person">
                     <label class="custom-input calculate__label" for="two_person"><span class="custom-input__btn custom-input__btn--radio"></span>2 человекa</label>
-                    <input class="default-input" type="radio" name="persons" value="yes" id="three_person">
+                    <input class="default-input" type="radio" name="persons" value="three_person" id="three_person">
                     <label class="custom-input calculate__label" for="three_person"><span class="custom-input__btn custom-input__btn--radio"></span>3 человекa</label>
                 </div>
                 <div class="calculate__question">
@@ -258,9 +259,9 @@
                 <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
                     вступления в СРО по вашему случаю</p>
                 <div class="calculate__inputs-block">
-                    <input type="text" class="calculate__text-input" placeholder="Ваше имя">
-                    <input type="text" class="calculate__text-input" placeholder="Ваш телефон">
-                    <input type="text" class="calculate__text-input" placeholder="Ваша почта">
+                    <input type="text" class="calculate__text-input" placeholder="Ваше имя" name="calculate-name">
+                    <input type="text" class="calculate__text-input" placeholder="Ваш телефон" name="calculate-phone">
+                    <input type="text" class="calculate__text-input" placeholder="Ваша почта" name="calculate-email">
                     <button type="submit" class="main-btn calculate__submit">отправить</button>
                 </div>
             </div>

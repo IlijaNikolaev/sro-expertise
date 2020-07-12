@@ -32,14 +32,16 @@ foreach ($calculateForm as $name => $value) {
             break;
         case 'sro_type':
             $message .= 'Тип СРО: ';
-            if($value == 'sro_builder') {
-                $message .= 'СРО строителей, ';
-            }
-            if($value == 'sro_planner') {
-                $message .= 'СРО проектировщиков, ';
-            }
-            if($value == 'sro_prospector') {
-                $message .= 'СРО изыскателей, ';
+            foreach ($value as $type) {
+                if($type == 'sro_builder') {
+                    $message .= 'СРО строителей, ';
+                }
+                if($type == 'sro_planner') {
+                    $message .= 'СРО проектировщиков, ';
+                }
+                if($type == 'sro_prospector') {
+                    $message .= 'СРО изыскателей, ';
+                }
             }
             $message .= "\r\n";
             break;

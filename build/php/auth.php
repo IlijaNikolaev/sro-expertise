@@ -4,21 +4,21 @@ define('MAIL_FROM',     'cro-expertiza@yandex.ru');
 define('MAIL_REPLY_TO', 'cro-expertiza@yandex.ru');
 define('SUBJECT',       'Идентификации и аутентификаия');
 
-$calculateForm = $_REQUEST;
+$form = $_REQUEST;
 
 $message = '';
-foreach ($calculateForm as $name => $value) {
+foreach ($form as $name => $value) {
     switch ($name) {
-        case 'auth-name':
+        case 'name':
             $message .= 'Название организации: '.$value . "\r\n";
             break;
-        case 'auth-inn':
+        case 'inn':
             $message .= 'ИНН: '.$value . "\r\n";
             break;
-        case 'auth-fio':
+        case 'fio':
             $message .= 'ФИО: '.$value . "\r\n";
             break;
-        case 'auth-phone':
+        case 'phone':
             $message .= 'Телефон: '.$value . "\r\n";
             break;
     }
@@ -41,4 +41,6 @@ if($message) {
     } else {
         echo 'error';
     }
+} else {
+    echo 'error';
 }

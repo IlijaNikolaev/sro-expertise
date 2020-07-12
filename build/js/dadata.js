@@ -22,7 +22,9 @@ $(".calculate__city").suggestions({
     formatResult: formatResult,
     formatSelected: formatSelected,
     onSelect: function(suggestion) {
-        console.log(suggestion);
+        if(suggestion.data && suggestion.data.city) {
+            $('.main-screen__title span').text('в городе ' + suggestion.data.city);
+        }
     }
 });
 

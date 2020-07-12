@@ -57,3 +57,17 @@ popups.popupToggler.on("click",function () {
 popups.menuToggler.on("click",function () {
     popups.popupToggle(popups.menu)
 })
+
+async function getCity() {
+    let response = await fetch('sypexgeo.php', {
+        mode: "no-cors", // same-origin, no-cors
+        redirect: "follow", // manual, error
+    });
+    let answer = await response.text();
+    console.log(answer);
+    if(answer !== 'error') {
+        $('.main-screen__title span').text('в городе ' + answer);
+        $('.calculate__city').text(answer);
+    }
+}
+getCity();

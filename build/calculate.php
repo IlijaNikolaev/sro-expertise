@@ -1,4 +1,10 @@
 <?php
+
+define('MAIL_TO',       'cro-expertiza@yandex.ru');
+define('MAIL_FROM',     'cro-expertiza@yandex.ru');
+define('MAIL_REPLY_TO', 'cro-expertiza@yandex.ru');
+define('SUBJECT',       'Калькулятор');
+
 $calculateForm = $_REQUEST;
 
 $message = '';
@@ -18,7 +24,7 @@ foreach ($calculateForm as $name => $value) {
             break;
         case 'public_procurement':
             if($value == 'yes') {
-                $message .= 'Планируется ли участие в гос.закупках'. "\r\n";
+                $message .= 'Планируется участие в гос.закупках'. "\r\n";
             }
             break;
         case 'conditions':
@@ -55,13 +61,20 @@ foreach ($calculateForm as $name => $value) {
 }
 
 if($message) {
-    $to      = 'cro-expertiza@yandex.ru';
-    $subject = 'Калькулятор';
+
+    $to      = MAIL_TO;
+    $subject = SUBJECT;
     $headers = array(
-        'From' => 'cro-expertiza@yandex.ru',
-        'Reply-To' => 'cro-expertiza@yandex.ru',
-        'X-Mailer' => 'PHP/' . phpversion()
+        'From'      => MAIL_FROM,
+        'Reply-To'  => MAIL_REPLY_TO,
+        'X-Mailer'  => 'PHP/' . phpversion()
     );
 
-    mail($to, $subject, $message, $headers);
+    $isSuccess = mail($to, $subject, $message, $headers);
+
+    if($isSuccess) {
+        echo 'success';
+    } else {
+        echo 'error';
+    }
 }

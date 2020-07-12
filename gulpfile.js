@@ -34,6 +34,11 @@ gulp.task("style",function () {
          .pipe(gulp.dest("build/css/"))
          .pipe(server.stream());});
 
+gulp.task("pack",function () {
+    gulp.watch("source/scss/main.scss", gulp.series('style'));
+    gulp.watch("source/*.html", gulp.series('html'));
+});
+
 gulp.task("dev",  function() {
 
      server.init({

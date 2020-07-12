@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRO-ex</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="main-header container">
+    <div class="main-header__wrapper container">
+        <a class="main-header__logo" href="/">
+            <include src="build/images/sro-logo.svg"></include>
+        </a>
+        <button class="main-header__menu-btn js-menu-toggler">
+            <include src="build/images/burger.svg"></include>
+            меню
+        </button>
+        <a class="main-header__phone" href="tel:+78003506001">8 (800) 350-60-01</a>
+        <button class="main-header__whatsapp main-btn main-btn--whatsapp">cвязаться в whatsapp</button>
+        <button class="main-header__callback main-btn js-popup-toggler">заказать звонок</button>
+    </div>
+
+    <div class="popup js-callback">
+        <div class="popup__wrapper">
+            <div class="popup__background">
+                <div class="popup__background-img"></div>
+                <include src="build/images/logo-big.svg"></include>
+            </div>
+            <div class="popup__content">
+                <p class="popup__title">Обратный звонок</p>
+                <form action="#" method="post"><input class="popup__input" type="text" placeholder="Ваше имя">
+                    <input required class="popup__input" type="tel" placeholder="Ваш телефон">
+                    <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a
+                            href="#">персональных
+                        данных</a></label>
+                    <button class="popup__btn main-btn" type="submit">Отправить</button>
+                </form>
+                <button class="popup__cross js-popup-toggler"><include src="build/images/cross.svg"></include></button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup--menu js-menu">
+        <div class="popup__wrapper">
+            <div class="popup__background">
+                <div class="popup__background-img"></div>
+                <include src="build/images/logo-big.svg"></include>
+            </div>
+            <div class="popup__content">
+                <ul class="page-menu">
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">О компании </a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Расчет стоимости</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Наши услуги</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Лицензии</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Схема работы</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Сотрудники</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Контракты</a></li>
+                    <li class="page-menu__item"><a href="#" class="page-menu__link">Контакты клиентов</a></li>
+                </ul>
+                <button class="popup__cross js-menu-toggler"><include src="build/images/cross.svg"></include></button>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main-screen container">
+    <div class="main-screen__wrapper">
+        <h1 class="main-screen__title">Оформление допуска СРО <span>в городе Санкт-Петербург</span></h1>
+        <p class="main-screen__subtitle">Работаем без скрытых платежей и комиссий. <br>
+            Оплата производится напрямую на спец.счета в СРО.</p>
+        <button class="main-screen__btn main-btn js-popup-toggler">Получить консультацию</button>
+        <button class="main-screen__btn-more main-btn main-btn--transparent-white">Узнать подробнее</button>
+    </div>
+</section>
+<section class="container container--white">
+    <div class="section description">
+        <h2 class="section-title description__title">
+            <span>Проконтролируем каждый этап</span> <span>для получения допуска СРО</span>
+        </h2>
+        <div class="content ">
+            <p class="description__text">
+                Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу
+                (специалистов) участие в формировании форм развития. Равным образом укрепление и развитие структуры в
+                значительной степени обуславливает создание направлений прогрессивного развития.
+            </p>
+            <ul class="description__numbers">
+                <li class="description__numbers-item">
+                    <span class="description__number">9</span>
+                    <span class="description__numbers-descr">Лет на рынке</span>
+                </li>
+                <li class="description__numbers-item">
+                    <span class="description__number">5 700</span>
+                    <span class="description__numbers-descr">Вступлений по России</span>
+                </li>
+                <li class="description__numbers-item">
+                    <span class="description__number">7 800</span>
+                    <span class="description__numbers-descr">Специалистов НРС</span>
+                </li>
+                <li class="description__numbers-item">
+                    <span class="description__number">15 000</span>
+                    <span class="description__numbers-descr">Постоянных клиентов</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="container container--grey">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Мы готовы предложить</span></h2>
+        <div class="content sro">
+            <div class="sro__item">
+                <h3 class="sro__title">Вступление в СРО</h3>
+                <div class="sro__wrapper">
+                    <p class="sro__description">Строительное, проектировочное, инженерные изыскания, энергоаудит</p>
+                    <p class="sro__time">
+                        <span class="sro__br-bold">Срок оформления</span> от 1 дня
+                    </p>
+                    <button class="main-btn sro__get-sro">оформить услугу</button>
+                    <a href="#" class="sro__download">
+                        <include src="build/images/pdf.svg"></include>
+                        <span class="sro__offer">Коммерческое предложение</span><br>
+                        <span class="sro__get-offer">Скачать PDF</span>
+                    </a>
+                    <p class="sro__price">
+                        <span class="sro__br-bold">Стоимость</span>от 20 000 рублей</p>
+                    <button class="main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                </div>
+            </div>
+
+            <div class="sro__item">
+                <h3 class="sro__title">Подготовка документов для СРО</h3>
+                <div class="sro__wrapper">
+                    <p class="sro__description">Заполнение бланков и сбор всех необходимых документов</p>
+                    <p class="sro__time">
+                        <span class="sro__br-bold">Срок оформления</span> от 1 дня
+                    </p>
+                    <button class="main-btn sro__get-sro">оформить услугу</button>
+                    <a href="#" class="sro__download">
+                        <include src="build/images/pdf.svg"></include>
+                        <span class="sro__offer">Коммерческое предложение</span><br>
+                        <span class="sro__get-offer">Скачать PDF</span>
+                    </a>
+                    <p class="sro__price">
+                        <span class="sro__br-bold">Стоимость</span>бесплатно</p>
+                    <button class="main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                </div>
+            </div>
+
+            <div class="sro__item">
+                <h3 class="sro__title">Помощь вашим специалистам</h3>
+                <div class="sro__wrapper">
+                    <p class="sro__description">Внесем в Национальный реестр специалистов</p>
+                    <p class="sro__time">
+                        <span class="sro__br-bold">Срок оформления</span> от 3 дней
+                    </p>
+                    <button class="main-btn sro__get-sro">оформить услугу</button>
+                    <a href="#" class="sro__download">
+                        <include src="build/images/pdf.svg"></include>
+                        <span class="sro__offer">Коммерческое предложение</span><br>
+                        <span class="sro__get-offer">Скачать PDF</span>
+                    </a>
+                    <p class="sro__price">
+                        <span class="sro__br-bold">Стоимость</span>от 5 000 рублей</p>
+                    <button class="main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                </div>
+            </div>
+            <div class="sro__item">
+                <h3 class="sro__title">Готовые специалисты НРС</h3>
+                <div class="sro__wrapper">
+                    <p class="sro__description">Предоставим своего специалиста НРС для вступления в СРО</p>
+                    <p class="sro__time">
+                        <span class="sro__br-bold">Срок оформления</span> от 1 дня
+                    </p>
+                    <button class="main-btn sro__get-sro">оформить услугу</button>
+                    <a href="#" class="sro__download">
+                        <include src="build/images/pdf.svg"></include>
+                        <span class="sro__offer">Коммерческое предложение</span><br>
+                        <span class="sro__get-offer">Скачать PDF</span>
+                    </a>
+                    <p class="sro__price">
+                        <span class="sro__br-bold">Стоимость</span>от 20 000 рублей</p>
+                    <button class="main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container container--white">
+    <div class="section ">
+        <h2 class="section-title description__title">
+            <span>Рассчитайте стоимость </span>
+            <span>вступления в СРО в вашем регионе</span>
+        </h2>
+        <form method="post" action="#" class="content calculate">
+            <div class="calculate__wrapper">
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">1</span></span>
+                        Вы находитесь в городе:
+                    </p>
+                    <button class="calculate__city">Санкт-Петербург</button>
+                </div>
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">2</span></span>
+                        Планируется ли участие <br> в гос.закупках?
+                    </p>
+                    <input class="default-input" type="radio" name="public_procurement" value="yes" id="pub_yes">
+                    <label class="custom-input calculate__label" for="pub_yes"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>Да</label>
+                    <input class="default-input" type="radio" name="public_procurement" value="yes" id="pub_no">
+                    <label class="custom-input calculate__label" for="pub_no"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>Нет</label>
+                </div>
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">3</span></span>
+                        Особые условия
+                    </p>
+                    <input class="default-input" type="radio" name="conditions" value="yes"
+                           id="normal_conditions">
+                    <label class="custom-input calculate__label" for="normal_conditions"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>Обычные</label>
+                    <input class="default-input" type="radio" name="conditions" value="yes"
+                           id="danger_conditions">
+                    <label class="custom-input calculate__label" for="danger_conditions"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>Особоопасные</label>
+                    <input class="default-input" type="radio" name="conditions" value="yes"
+                           id="atomic_conditions">
+                    <label class="custom-input calculate__label" for="atomic_conditions"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>Атомные</label>
+                </div>
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">4</span></span>
+                        Выберите тип СРО
+                    </p>
+                    <input class="default-input" type="checkbox" name="sro_type" value="yes" id="sro_builder">
+                    <label class="custom-input calculate__label" for="sro_builder"><span
+                            class="custom-input__btn custom-input__btn"></span>СРО строителей</label>
+                    <input class="default-input" type="checkbox" name="sro_type" value="yes" id="sro_planner">
+                    <label class="custom-input calculate__label" for="sro_planner"><span
+                            class="custom-input__btn custom-input__btn"></span>СРО проектировщиков</label>
+                    <input class="default-input" type="checkbox" name="sro_type" value="yes"
+                           id="sro_prospector">
+                    <label class="custom-input calculate__label" for="sro_prospector"><span
+                            class="custom-input__btn custom-input__btn"></span>СРО изыскателей</label>
+                </div>
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">5</span></span>
+                        Сколько необходимо <br> специалистов для нац.реестра?
+                    </p>
+                    <input class="default-input" type="radio" name="persons" value="yes" id="one_person">
+                    <label class="custom-input calculate__label" for="one_person"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>1 человек</label>
+                    <input class="default-input" type="radio" name="persons" value="yes" id="two_person">
+                    <label class="custom-input calculate__label" for="two_person"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>2 человекa</label>
+                    <input class="default-input" type="radio" name="persons" value="yes" id="three_person">
+                    <label class="custom-input calculate__label" for="three_person"><span
+                            class="custom-input__btn custom-input__btn--radio"></span>3 человекa</label>
+                </div>
+                <div class="calculate__question">
+                    <p class="calculate__header">
+                        <span class="calculate__number-border"><span class="calculate__number">6</span></span>
+                        Укажите сумму ген.подряда
+                    </p>
+                    <input class="calculate__total" type="number" name="sum" placeholder="Сумма в рублях">
+                </div>
+            </div>
+            <div class="calculate__callback">
+                <p class="calculate__callback-title">Рассчитать стоимость</p>
+                <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
+                    вступления в СРО по вашему случаю</p>
+                <div class="calculate__inputs-block">
+                    <input type="text" class="calculate__text-input" placeholder="Ваше имя">
+                    <input type="text" class="calculate__text-input" placeholder="Ваш телефон">
+                    <input type="text" class="calculate__text-input" placeholder="Ваша почта">
+                    <button type="submit" class="main-btn calculate__submit">отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <section class="container container--white">
+        <div class="section">
+            <h2 class="section-title description__title">
+                <span>Команда специалистов</span>
+                <span>СРО-экспертиза</span>
+            </h2>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container swiper-team team">
+            <div class="team__cite">
+                <p class="team__cite-text js-cite-block">Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим
+                    своих
+                    клиентов и делаем их бизнес лучше каждый день.
+                </p>
+                <include src="build/images/cite.svg"></include>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="team__slide"
+                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                        <img data-src="./images/team1.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                        </div>
+                        <h2 class="team__slide-title">Кристина Исаева</h2>
+                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                        <button class="main-btn team__btn js-popup-toggler  js-popup-toggler ">Начать работу</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__slide"
+                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                        <img data-src="./images/team2.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        <h2 class="team__slide-title">Кристина Исаева</h2>
+                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__slide"
+                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                        <img data-src="./images/team3.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                        </div>
+                        <h2 class="team__slide-title">Кристина Исаева</h2>
+                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__slide"
+                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                        <img data-src="./images/team4.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                        </div>
+                        <h2 class="team__slide-title">Кристина Исаева</h2>
+                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__slide"
+                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                        <img data-src="./images/team5.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                        </div>
+                        <h2 class="team__slide-title">Кристина Исаева</h2>
+                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                    </div>
+                </div>
+            </div>
+            <div class="team__arrows-block arrows-block">
+                <div class="button-prev">
+                    <include src="build/images/arrow.svg"></include>
+                </div>
+                <div class="button-next">
+                    <include src="build/images/arrow.svg"></include>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container container--grey">
+        <div class="section">
+            <h2 class="section-title description__title">
+                <span>Почему бизнес выбирает нашу</span>
+                <span>компанию для вступления в СРО</span>
+            </h2>
+            <div class="content about">
+                <div class="about__wrapper">
+                    <div class="about__item">
+                        <include src="build/images/about1.svg"></include>
+                        <p class="about__item-title">Бесплатная доставка</p>
+                        <p class="about__item-info">Бесплатная курьерская доставка свидетельства по всей России в
+                            руку</p>
+                    </div>
+                    <div class="about__item">
+                        <include src="build/images/about2.svg"></include>
+                        <p class="about__item-title">Работаем по всей России</p>
+                        <p class="about__item-info">C 2012 года вы выдали более 5000 допусков СРО в 85 регионах
+                            России </p>
+                    </div>
+                    <div class="about__item">
+                        <include src="build/images/about3.svg"></include>
+                        <p class="about__item-title">Помощь на все этапах</p>
+                        <p class="about__item-info">Специалисты НРС внесение в реест, консультации на всех этапах</p>
+                    </div>
+                    <div class="about__item">
+                        <include src="build/images/about4.svg"></include>
+                        <p class="about__item-title">Официальная регистрация</p>
+                        <p class="about__item-info">Наши саморегулируемые организации занесены в реестр Ростехнадзора и
+                            состоят в Нострой</p>
+                    </div>
+                    <div class="about__item">
+                        <include src="build/images/about5.svg"></include>
+                        <p class="about__item-title">Консультации после получения СРО</p>
+                        <p class="about__item-info">Косультации сотрудников после получения СРО, юридическое
+                            сопровождение</p>
+                    </div>
+                    <div class="about__item">
+                        <include src="build/images/about6.svg"></include>
+                        <p class="about__item-title">Бесплатная юридическая помощь</p>
+                        <p class="about__item-info">Бесплатное юридическое сопровождение на всех этапах
+                            сотрудничества</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container container--white">
+        <div class="section">
+            <h2 class="section-title description__title">
+                <span>Сравните решения</span>
+                <span>и убедитесь сами</span>
+            </h2>
+            <div class="content compare">
+                <div class="compare__item">
+                    <p class="compare__title">СРО-Экспертиза</p>
+                    <div class="compare__block">
+                        <ul class="compare__list compare__list--blue">
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Подбор СРО</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Рассмотрение зявки</p>
+                                <p class="compare__list-item-info">До 1 месяца</p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Срок вступления</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Оформление документов</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Оплата</p>
+                                <p class="compare__list-item-info">Напрямую в СРО</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="compare__item">
+                    <p class="compare__title">Самостоятельное получение</p>
+                    <div class="compare__block">
+                        <ul class="compare__list">
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Подбор СРО</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Рассмотрение зявки</p>
+                                <p class="compare__list-item-info">До 1 месяца</p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Срок вступления</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Оформление документов</p>
+                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                    СРО-экспертиза </p>
+                            </li>
+                            <li class="compare__list-item">
+                                <p class="compare__list-item-title">Оплата</p>
+                                <p class="compare__list-item-info">Напрямую в СРО</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container container--white ">
+        <div class="section stages">
+            <div class="stages__left"><h2 class="section-title description__title">
+                <span>Этапы вступления в СРО <br>с нашей помощью</span>
+            </h2>
+                <p class="stages__subtitle">Сравните самостоятельное получение допуска и через СРО-экспертиза</p>
+                <button class="main-btn js-popup-toggler">Заказать звонок</button>
+            </div>
+            <div class="stages__right">
+                <ul class="stages__list">
+                    <li class="stages__list-item"><span class="stages__number">1</span>
+                        <p class="stages__title">Оформите заявку</p>
+                        <p class="stages__info">Подайте заявление на сайте или по телефону <br> <a class="stages__phone"
+                                                                                                   href="tel:+78003506001">8
+                            (800) 350-60-01</a>. Менеджер
+                            свяжется с вами для уточнения всех деталей</p>
+                    </li>
+                    <li class="stages__list-item"><span class="stages__number">2</span>
+                        <p class="stages__title">Подбор СРО</p>
+                        <p class="stages__info">Мы детально рассмотрим Ваш запрос <br> и подберем необходимое СРО <br>
+                            по вашим требованиям</p>
+                    </li>
+                    <li class="stages__list-item"><span class="stages__number">3</span>
+                        <p class="stages__title">Заключение договора</p>
+                        <p class="stages__info">Подготовим необходимый пакет документов, и проконсультируем об оплате
+                            взносов</p>
+                    </li>
+                    <li class="stages__list-item"><span class="stages__number">4</span>
+                        <p class="stages__title">Получение копий документов</p>
+                        <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
+                            работ на законных и сертифицированных основаниях</p>
+                    </li>
+                    <li class="stages__list-item"><span class="stages__number">5</span>
+                        <p class="stages__title">Получение оригиналов документов</p>
+                        <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
+                            работ на законных и сертифицированных основаниях</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="section">
+            <h2 class="section-title description__title">
+                <span>Пакет документов, которые вы</span>
+                <span>получите по оконочанию работ</span>
+            </h2>
+            <div class="content content--wide documents">
+                <div class="swiper-container swiper-documents documents__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img data-src="./images/document.png" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./images/document.png" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./images/document.png" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./images/document.png" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img data-src="./images/document.png" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                    </div>
+                    <div class="documents__arrows-block arrows-block">
+                        <div class="button-prev">
+                            <include src="build/images/arrow.svg"></include>
+                        </div>
+                        <div class="button-next">
+                            <include src="build/images/arrow.svg"></include>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+</section>
+<section class="container">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Контракты наших клиентов</span>
+            <span>наши главные достижения</span>
+        </h2>
+        <div class="content content--wide buildings">
+            <div class="buildings__item"><img src="./images/building1.jpg" alt="">
+                <p class="buildings__title">«Северная звезда»</p>
+                <p class="buildings__info">Жилой комплекс по улице Красноармейской 1 в г. Сочи</p>
+                <p class="buildings__price">9 900 900 ₽</p>
+            </div>
+            <div class="buildings__item"><img src="./images/building2.jpg" alt="">
+                <p class="buildings__title">«Северная звезда»</p>
+                <p class="buildings__info">Жилой комплекс по улице Красноармейской 1 в г. Сочи</p>
+                <p class="buildings__price">9 900 900 ₽</p>
+            </div>
+            <div class="buildings__item"><img src="./images/building3.jpg" alt="">
+                <p class="buildings__title">«Северная звезда»</p>
+                <p class="buildings__info">Жилой комплекс по улице Красноармейской 1 в г. Сочи</p>
+                <p class="buildings__price">9 900 900 ₽</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container container--white">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Официально аккредитованные</span>
+            <span>представители в России</span>
+        </h2>
+        <div class="content content--wide documents">
+            <div class="swiper-container swiper-accreditadion documents__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                </div>
+                <div class="documents__arrows-block arrows-block">
+                    <div class="button-prev">
+                        <include src="build/images/arrow.svg"></include>
+                    </div>
+                    <div class="button-next">
+                        <include src="build/images/arrow.svg"></include>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container container--white">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Официально аккредитованные</span>
+            <span>представители в России</span>
+        </h2>
+        <div class="content branch">
+            <p class="branch__number">80
+                <span class="branch__number-info">Представительств СРО в регионах России</span>
+            </p>
+            <img class="branch__map" src="./images/map.png" alt="Карта">
+        </div>
+    </div>
+</section>
+
+<section class="container container--white">
+    <div class="section">
+        <div class="content content--wide contacts">
+            <div class="contacts__text">
+                <h2 class="section-title description__title">
+                    <span>Контакты</span>
+                </h2>
+                <p class="contacts__subtitle">Офис в Санкт-Петербурге</p>
+                <ul class=contacts__list>
+                    <li class="contacts__item">
+                        <include src="build/images/place.svg"></include>
+                        Санкт- Петербург, пр. Обуховской обороны, <br> д.271, лит.»А», БЦ «Обуховъ-Центр», оф. 825
+                    </li>
+                    <li class="contacts__item">
+                        <include src="build/images/schedule.svg"></include>
+
+                        ПН-ПТ 9:00-18:00
+                    </li>
+                    <li class="contacts__item">
+                        <include src="build/images/phone.svg"></include>
+                        <a href="tel:+78003506001">8 (800) 350-60-01</a>
+                    </li>
+                    <li class="contacts__item">
+                        <include src="build/images/mail.svg"></include>
+                        <a href="mailto:sale@sro-expertiza.ru">sale@sro-expertiza.ru</a>
+                    </li>
+                </ul>
+                <button class="main-btn js-popup-toggler">Заказать звонок</button>
+            </div>
+            <div class="contacts__map">
+                <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A619e4ede67f32c65c12b5a32e52c35ffb74bf19d3ca90975cb782518d3a78718&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </div>
+
+</section>
+<footer class="page-footer">
+    <div class="section">
+        <div class="page-footer__top">
+            <ul class="page-footer__columns">
+                <li class="page-footer__column">
+                    <include src="build/images/sro-logo.svg"></include>
+                </li>
+                <li class="page-footer__column">
+                    <ul class="page-menu">
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">О компании </a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Расчет стоимости</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Наши услуги</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Лицензии</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Схема работы</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Сотрудники</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Контракты</a></li>
+                        <li class="page-menu__item"><a href="#" class="page-menu__link">Контакты клиентов</a></li>
+                    </ul>
+                </li>
+                <li class="page-footer__column">
+                    <a class="page-footer__contact" href="tel:+78003506001">8 (800) 350-60-01</a>
+                    <p class="page-footer__contact-subtitle">Звонок по России бесплатный</p>
+                    <a class="page-footer__contact" href="mailto:sale@sro-expertiza.ru">sale@sro-expertiza.ru</a>
+                    <p class="page-footer__contact-subtitle">Единая почта по всем вопросам</p>
+                </li>
+                <li class="page-footer__column">
+                    <p class="page-footer__address">Санкт- Петербург, пр. Обуховской обороны, д.271, лит.»А», БЦ
+                        «Обуховъ-Центр», оф. 825</p>
+                    <p class="page-footer__schedule">Пн-Пт, 10:00-19:00</p>
+                    <div class="page-footer__about">
+                        <p class="page-footer__about-item">ИНН: 7811510823</p>
+                        <p class="page-footer__about-item">ОГРН: 1117847713940</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__bottom">
+            <p class="page-footer__copyright">© ООО «СРО-Экспертиза»</p>
+            <div class="page-footer__policy">
+                <a class="page-footer__policy-link" download="true" href="#">Политика конфиденциальности</a>
+                <a class="page-footer__policy-link" download="true" href="#">Пользовательское соглашение</a>
+            </div>
+            <p class="page-footer__year">2020</p>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
+
+
+

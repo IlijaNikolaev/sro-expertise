@@ -5,10 +5,10 @@ define('MAIL_FROM',     'cro-expertiza@yandex.ru');
 define('MAIL_REPLY_TO', 'cro-expertiza@yandex.ru');
 define('SUBJECT',       'Калькулятор');
 
-$calculateForm = $_REQUEST;
+$form = $_REQUEST;
 
 $message = '';
-foreach ($calculateForm as $name => $value) {
+foreach ($form as $name => $value) {
     switch ($name) {
         case 'calculate-name':
             $message .= 'Имя: '.$value . "\r\n";
@@ -77,4 +77,6 @@ if($message) {
     } else {
         echo 'error';
     }
+} else {
+    echo 'error';
 }

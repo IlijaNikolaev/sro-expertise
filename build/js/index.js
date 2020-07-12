@@ -155,7 +155,7 @@ popups.menuToggler.on("click",function () {
 })
 
 async function getCity() {
-    let response = await fetch('sypexgeo.php', {
+    let response = await fetch('/php/sypexgeo.php', {
         mode: "no-cors", // same-origin, no-cors
         redirect: "follow", // manual, error
     });

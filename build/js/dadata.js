@@ -22,6 +22,50 @@ $(".calculate__city").suggestions({
     formatResult: formatResult,
     formatSelected: formatSelected,
     onSelect: function(suggestion) {
+        if(suggestion.data && suggestion.data.city) {
+            $('.main-screen__title span').text('в городе ' + suggestion.data.city);
+        }
+    }
+});
+
+
+function showSuggestion(suggestion) {
+    console.log(suggestion);
+    var data = suggestion.data;
+    if (!data)
+        return;
+
+    if (data.name) {
+        $(".auth-name").val(data.name.short_with_opf || "");
+    }
+
+    if (data.management) {
+        $(".auth-fio").val(data.management.name || "");
+    }
+
+    $(".auth-inn").val(data.inn || "");
+}
+
+$(".auth-name").suggestions({
+    token: token,
+    type: "PARTY",
+    count: 5,
+    /* Вызывается, когда пользователь выбирает одну из подсказок */
+    onSelect: showSuggestion
+});
+
+$(".auth-inn").suggestions({
+    token: token,
+    type: "PARTY",
+    count: 5,
+    /* Вызывается, когда пользователь выбирает одну из подсказок */
+    onSelect: showSuggestion
+});
+
+$(".auth-fio").suggestions({
+    token: token,
+    type: "NAME",
+    onSelect: function(suggestion) {
         console.log(suggestion);
     }
 });

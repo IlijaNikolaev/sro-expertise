@@ -154,6 +154,29 @@ popups.menuToggler.on("click",function () {
     popups.popupToggle(popups.menu)
 })
 
+
+for (let i = 1;i< 6;i++) {
+        let slide = ".team .slide"+i;
+    $(slide).on("click", function () {
+        console.log(slide)
+        team.slideToLoop(i -1, 500, true);
+
+    })
+}
+
+// $('.team .swiper-slide').each(function (index, value) {
+//     $(this).on("click",function () {
+//         console.log(index)
+//         if(index>10){
+//             team.slideToLoop(index-10, 500, true);
+//         }
+//         else {
+//             team.slideToLoop(index-3, 500, true);
+//         }
+//     })
+//     // console.log(index);
+// });
+
 async function getCity() {
     let response = await fetch('/php/sypexgeo.php', {
         mode: "no-cors", // same-origin, no-cors

@@ -43,7 +43,7 @@ var team = new Swiper('.swiper-team', {
 
 });
 var documents = new Swiper('.swiper-documents', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween:20,
     lazy: true,
     loop:true,
@@ -86,7 +86,7 @@ var documents = new Swiper('.swiper-documents', {
 });
 
 var accreditadion = new Swiper('.swiper-accreditadion', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween:20,
     lazy: true,
     loop:true,

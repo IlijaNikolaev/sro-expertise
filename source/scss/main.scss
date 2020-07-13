@@ -58,6 +58,7 @@ button {
     padding-bottom: 120px;
     @media (max-width: $phone-big) {
       padding-bottom: 50px;
+      padding-top: 50px;
     }
   }
 
@@ -1096,11 +1097,11 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  @media (max-width:$tablet) {
+  @media (max-width: $tablet) {
     display: block;
   }
 
-    &__list {
+  &__list {
     padding-left: 90px;
     position: relative;
 
@@ -1187,7 +1188,7 @@ button {
     }
   }
 
-  &__btn{
+  &__btn {
     @media (max-width: $tablet) {
       display: none;
     }
@@ -1197,7 +1198,7 @@ button {
 .documents {
   position: relative;
 
-  &__arrows-block{
+  &__arrows-block {
     @media (max-width: $phone-big) {
       display: none;
     }
@@ -1207,27 +1208,28 @@ button {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  &__img{
+
+  &__img {
     height: auto;
     max-width: 90%;
     display: block;
   }
 
-  &__pagination{
+  &__pagination {
     @media (min-width: $phone-big) {
       display: none;
     }
   }
 }
 
-.auth{
+.auth {
 
-  &__form{
+  &__form {
     width: 700px;
     max-width: 100%;
   }
 
-  &__input{
+  &__input {
     display: block;
     width: 100%;
     border: 1px solid $blue;
@@ -1240,7 +1242,7 @@ button {
     outline: none;
   }
 
-  &__info{
+  &__info {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -1250,22 +1252,27 @@ button {
     color: $black;
   }
 
-  &__submit{
+  &__submit {
     width: 100%;
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $tablet-small) {
+      display: block;
+    }
   }
 
-  &__img{
+  &__img {
     margin-left: 50px;
+    @media (max-width: $tablet-small) {
+      display: none;
+    }
   }
 }
-
-
 
 
 .button-prev, .button-next {
@@ -1288,7 +1295,7 @@ button {
     }
   }
 
-  img{
+  img {
     max-width: 100%;
   }
 
@@ -1328,6 +1335,10 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  @media (max-width: $desktop-medium) {
+    overflow: hidden;
+    width: 100%;
+  }
 
   &__number {
     font-family: Inter;
@@ -1335,8 +1346,18 @@ button {
     font-weight: normal;
     font-size: 250px;
     line-height: 120%;
+    max-width: 100%;
     color: $blue;
     width: 310px;
+    @media (max-width: $desktop-medium) {
+      position: absolute;
+    }
+  }
+
+  &__img {
+    @media (max-width: $desktop-medium) {
+      width: 100%;
+    }
   }
 
   &__number-info {
@@ -1354,6 +1375,9 @@ button {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  @media (max-width: $tablet) {
+    display: block;
+  }
 
   &__subtitle {
     font-family: Inter;
@@ -1367,6 +1391,10 @@ button {
 
   &__text {
     padding-right: 50px;
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
@@ -1395,8 +1423,8 @@ button {
   }
 
   &__map {
-    width: 100%;
-    max-width: 850px;
+    width: 850px;
+    max-width: 100%;
     height: 450px;
   }
 }
@@ -1404,6 +1432,36 @@ button {
 .page-footer {
   background: #414042;
   padding-top: 50px;
+
+  &__logo {
+    @media (max-width: $desktop-small) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $tablet-small) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @media (max-width: $tablet-small) {
+        display: block;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (max-width: $desktop-small) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 100%;
+    }
+    @media (max-width: $tablet-small) {
+      display: block;
+    }
+  }
 
   &__top {
     border-bottom: 1px solid rgba(246, 246, 246, 0.2);
@@ -1416,6 +1474,18 @@ button {
     justify-content: space-between;
     color: white;
     list-style: none;
+    @media (max-width: $desktop-small) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $tablet-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__phone {
+    @media (max-width: $tablet-small) {
+      order: -1;
+    }
   }
 
   &__column {
@@ -1438,6 +1508,9 @@ button {
 
     &:not(:first-child) {
       margin-top: 40px;
+      @media (max-width: $tablet-small) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -1458,6 +1531,7 @@ button {
     line-height: 140%;
     color: #FFFFFF;
     width: 410px;
+    max-width: 100%;
   }
 
   &__schedule {
@@ -1467,10 +1541,16 @@ button {
     font-size: 14px;
     line-height: 17px;
     margin-top: 10px;
+    @media (max-width: $desktop-small) {
+      margin-top: 0;
+    }
   }
 
   &__about {
     margin-top: 30px;
+    @media (max-width: $desktop-small) {
+      margin-top: 0;
+    }
   }
 
   &__about-item {
@@ -1487,10 +1567,20 @@ button {
     justify-content: space-between;
     list-style: none;
     width: 355px;
+    max-width: 100%;
+    @media (max-width: $tablet-small) {
+      margin-top: 20px;
+      width: auto;
+      max-width: 100%;
+    }
 
     &__item {
       width: 50%;
       margin-bottom: 15px;
+      @media (max-width: $tablet-small) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
 
     &__link {
@@ -1510,10 +1600,19 @@ button {
     height: 100px;
     color: white;
     position: relative;
+    @media (max-width: $tablet-small) {
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      padding-top: 10px;
+    }
   }
 
   &__year {
     margin-left: auto;
+    @media (max-width: $tablet-small) {
+      margin: 0 auto 10px auto;
+    }
   }
 
   &__policy {
@@ -1525,6 +1624,17 @@ button {
     margin: auto;
     width: 460px;
     height: 17px;
+
+    &--mobile {
+      display: none;
+      @media (max-width: $tablet-small) {
+        display: block;
+      }
+    }
+
+    @media (max-width: $tablet-small) {
+      display: none;
+    }
   }
 
   &__policy-link {
@@ -1540,6 +1650,18 @@ button {
       margin-right: 15px;
       border-right: 1px solid white;
       padding-right: 15px;
+      @media (max-width: $tablet-small) {
+        display: block;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    @media (max-width: $tablet-small) {
+      margin: 20px auto;
     }
   }
 }

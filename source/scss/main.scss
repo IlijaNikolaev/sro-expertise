@@ -1993,7 +1993,16 @@ button {
   }
 }
 
+.not-checked{
+  color: red;
+  a{
+    color: red;
+  }
+}
 
+.empty__input{
+  border:1px solid red;
+}
 
 
 

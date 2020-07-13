@@ -46,11 +46,11 @@
                         <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                     </div>
                     <div class="form-common__posted">
-                        <input class="popup__input" type="text" placeholder="Ваше имя" name="callback-name">
-                        <input required="" class="popup__input" type="tel" placeholder="Ваш телефон" name="callback-phone">
-                        <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a href="#">персональных
+                        <input class="required popup__input" type="text" placeholder="Ваше имя" name="callback-name">
+                        <input class=" required popup__input phone-input" type="tel" placeholder="Ваш телефон" name="callback-phone">
+                        <label class="popup__personal"><input type="checkbox" class="personal-data">Даю согласие на обработку <a href="#">персональных
                             данных</a></label>
-                        <button class="popup__btn main-btn" type="submit">Отправить</button>
+                        <button class="popup__btn main-btn callback__submit" type="submit">Отправить</button>
                     </div>
                 </form>
                 <button class="popup__cross js-popup-toggler">
@@ -298,11 +298,12 @@
                 <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
                     вступления в СРО по вашему случаю</p>
                 <div class="calculate__inputs-block">
-                    <input type="text" class="calculate__text-input" placeholder="Ваше имя" name="calculate-name">
-                    <input type="text" class="calculate__text-input" placeholder="Ваш телефон" name="calculate-phone">
-                    <input type="text" class="calculate__text-input" placeholder="Ваша почта" name="calculate-email">
+                    <input type="text" class="required calculate__text-input" placeholder="Ваше имя" name="calculate-name">
+                    <input type="text" class="required calculate__text-input phone-input" placeholder="Ваш телефон" name="calculate-phone">
+                    <input type="text" class="required calculate__text-input" placeholder="Ваша почта" name="calculate-email">
                     <button type="submit" class="main-btn calculate__submit">отправить</button>
                 </div>
+                <label><input type="checkbox" class="personal-data">Даю согласие на обработку <a>персональных данных</a></label>
             </div>
         </form>
     </div>
@@ -523,10 +524,10 @@
                     <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                 </div>
                 <div class="form-common__posted">
-                    <input type="text" class="whatsapp__input" name="whtsapp" placeholder="Введите свой номер в WhatsApp">
+                    <input type="text" class="required whatsapp__input phone-input" name="whtsapp" placeholder="Введите свой номер в WhatsApp">
                     <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.358 3.633A12.397 12.397 0 0012.552 0C5.692 0 .107 5.557.104 12.387c0 2.184.573 4.315 1.662 6.194L0 25l6.599-1.723a12.482 12.482 0 005.948 1.508h.005c6.86 0 12.445-5.557 12.448-12.388a12.282 12.282 0 00-3.642-8.764zm-8.806 19.06h-.004c-1.856 0-3.677-.497-5.266-1.435l-.377-.223-3.916 1.022 1.045-3.8-.246-.39a10.235 10.235 0 01-1.582-5.479C2.208 6.711 6.85 2.092 12.556 2.092a10.3 10.3 0 017.315 3.02 10.21 10.21 0 013.027 7.284c-.002 5.678-4.643 10.297-10.346 10.297zm5.675-7.712c-.31-.155-1.84-.903-2.125-1.007-.285-.103-.492-.154-.7.155-.207.31-.803 1.007-.985 1.214-.181.207-.362.232-.673.077-.312-.155-1.314-.482-2.502-1.536-.924-.82-1.548-1.834-1.73-2.144-.181-.31-.001-.462.137-.632.336-.416.673-.852.777-1.059.104-.206.052-.387-.026-.542-.078-.155-.7-1.678-.959-2.298-.252-.604-.509-.522-.7-.532a12.48 12.48 0 00-.596-.01c-.207 0-.544.077-.83.387-.284.31-1.088 1.058-1.088 2.582 0 1.524 1.115 2.996 1.27 3.202.156.207 2.194 3.333 5.313 4.674.743.32 1.322.51 1.774.652.745.236 1.423.202 1.959.123.597-.09 1.84-.75 2.1-1.472.258-.723.258-1.343.18-1.472-.077-.13-.285-.207-.596-.362z" fill="#24C374"></path></svg>
-                    <button class="main-btn main-btn--transparent-white">Отправить запрос</button>
-                    <label class="whatsapp__personal"><input type="checkbox">Даю согласие на обработку <a class="whatsapp__personal-link">персональных данных</a></label>
+                    <button class="whatsapp__submit main-btn main-btn--transparent-white">Отправить запрос</button>
+                    <label class="whatsapp__personal"><input type="checkbox" class="personal-data">Даю согласие на обработку <a class="whatsapp__personal-link">персональных данных</a></label>
                 </div>
             </form>
         </div>
@@ -709,10 +710,10 @@
                         <p class="form-common__title">Произошла ошибка</p>
                         <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                     </div>
-                    <div class="form-common__posted"><input type="text" class="auth__input auth-name" placeholder="Название организации" name="name">
+                    <div class="form-common__posted"><input type="text" class="required auth__input auth-name" placeholder="Название организации" name="name">
                         <input type="text" class="auth__input auth-inn" placeholder="ИНН" name="inn">
                         <input type="text" class="auth__input auth-fio" placeholder="ФИО собственника" name="fio">
-                        <input type="text" class="auth__input auth-phone" placeholder="Номер телефона" name="phone">
+                        <input type="text" class="required auth__input phone-input auth-phone" placeholder="Номер телефона" name="phone">
                         <button class="main-btn auth__submit" type="submit">отправить запрос</button>
                     </div>
                 </form>

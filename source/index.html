@@ -46,12 +46,12 @@
                         <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                     </div>
                     <div class="form-common__posted">
-                        <input class="popup__input" type="text" placeholder="Ваше имя" name="callback-name">
-                        <input required class="popup__input" type="tel" placeholder="Ваш телефон" name="callback-phone">
-                        <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a
+                        <input class="required popup__input" type="text" placeholder="Ваше имя" name="callback-name">
+                        <input class=" required popup__input phone-input" type="tel" placeholder="Ваш телефон" name="callback-phone">
+                        <label class="popup__personal"><input type="checkbox" class="personal-data">Даю согласие на обработку <a
                                 href="#">персональных
                             данных</a></label>
-                        <button class="popup__btn main-btn" type="submit">Отправить</button>
+                        <button class="popup__btn main-btn callback__submit" type="submit">Отправить</button>
                     </div>
                 </form>
                 <button class="popup__cross js-popup-toggler">
@@ -315,11 +315,12 @@
                 <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
                     вступления в СРО по вашему случаю</p>
                 <div class="calculate__inputs-block">
-                    <input type="text" class="calculate__text-input" placeholder="Ваше имя" name="calculate-name">
-                    <input type="text" class="calculate__text-input" placeholder="Ваш телефон" name="calculate-phone">
-                    <input type="text" class="calculate__text-input" placeholder="Ваша почта" name="calculate-email">
+                    <input type="text" class="required calculate__text-input" placeholder="Ваше имя" name="calculate-name">
+                    <input type="text" class="required calculate__text-input phone-input" placeholder="Ваш телефон" name="calculate-phone">
+                    <input type="text" class="required calculate__text-input" placeholder="Ваша почта" name="calculate-email">
                     <button type="submit" class="main-btn calculate__submit">отправить</button>
                 </div>
+                <label><input type="checkbox" class="personal-data">Даю согласие на обработку <a>персональных данных</a></label>
             </div>
         </form>
     </div>
@@ -545,11 +546,11 @@
                     <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                 </div>
                 <div class="form-common__posted">
-                    <input type="text" class="whatsapp__input" name="whtsapp"
+                    <input type="text" class="required whatsapp__input phone-input" name="whtsapp"
                            placeholder="Введите свой номер в WhatsApp">
                     <include src="build/images/whatsapp-icon.svg"></include>
-                    <button class="main-btn main-btn--transparent-white">Отправить запрос</button>
-                    <label class="whatsapp__personal"><input type="checkbox">Даю согласие на обработку <a
+                    <button class="whatsapp__submit main-btn main-btn--transparent-white">Отправить запрос</button>
+                    <label class="whatsapp__personal"><input type="checkbox" class="personal-data">Даю согласие на обработку <a
                             class="whatsapp__personal-link">персональных данных</a></label>
                 </div>
             </form>
@@ -734,11 +735,11 @@
                         <p class="form-common__title">Произошла ошибка</p>
                         <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
                     </div>
-                    <div class="form-common__posted"><input type="text" class="auth__input auth-name"
+                    <div class="form-common__posted"><input type="text" class="required auth__input auth-name"
                                                             placeholder="Название организации" name="name">
-                        <input type="text" class="auth__input auth-inn" placeholder="ИНН" name="inn">
+                        <input type="text" class="auth__input auth-inn" placeholder="ИНН"name="inn">
                         <input type="text" class="auth__input auth-fio" placeholder="ФИО собственника" name="fio">
-                        <input type="text" class="auth__input auth-phone" placeholder="Номер телефона" name="phone">
+                        <input type="text" class="required auth__input phone-input auth-phone" placeholder="Номер телефона" name="phone">
                         <button class="main-btn auth__submit" type="submit">отправить запрос</button>
                     </div>
                 </form>

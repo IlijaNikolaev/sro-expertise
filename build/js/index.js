@@ -170,16 +170,99 @@ for (let i = 1;i< 6;i++) {
 //     })
 //     // console.log(index);
 // });
-
-async function getCity() {
-    let response = await fetch('/php/sypexgeo.php', {
-        mode: "no-cors", // same-origin, no-cors
-        redirect: "follow", // manual, error
+(function($) {
+    $.fn.inputFilter = function(inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+            if (inputFilter(this.value)) {
+                this.oldValue = this.value;
+                this.oldSelectionStart = this.selectionStart;
+                this.oldSelectionEnd = this.selectionEnd;
+            } else if (this.hasOwnProperty("oldValue")) {
+                this.value = this.oldValue;
+                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+            } else {
+                this.value = "";
+            }
+        });
+    };
+}(jQuery));
+$(document).ready(function() {
+    $(".phone-input").inputFilter(function(value) {
+        return   /^([0-9]{0,1})?([-0-9]{0,1})?([0-9]{0,2})?([-0-9]{0,2})?([0-9]{0,2})?([-0-9]{0,2})?([0-9]{0,2})?([-0-9]{0,1})?([0-9]{0,2})?(\([0-9]{3})?(\)[0-9]{7})?(\+[0-9]{0,1})?([-0-9]{0,1})?([0-9]{0,3})?([-0-9]{0,1})?([0-9]{0,3})?([-0-9]{0,1})?([0-9]{0,2})?([-0-9]{0,1})?([0-9]{0,2})?( [0-9]{1,12})?( [0-9]{4})?( [0-9]{3})?( [0-9]{2})?( [0-9]{2})?(\([0-9]{1,3})?(\)[0-9]{1})?([-0-9]{0,3})?([-]{0,5})?( [0-9]{6})?$/.test(value);
     });
-    let answer = await response.text();
-    if(answer !== 'error') {
-        $('.main-screen__title span').text('в городе ' + answer);
-        $('.calculate__city').val(answer);
+});
+
+//empty input validation
+let valid = true;
+const validation = function (form) {
+    valid = true;
+    let input = form.find(".required");
+    let checkbox = form.find(".personal-data");
+    input.each(function (index, value) {
+        if ($(value).val().length === 0) {
+            $(value).addClass("empty__input");
+            valid = false;
+        } else {
+            $(value).removeClass("empty__input");
+        }
+    });
+    if (!checkbox.prop("checked")) {
+        $(checkbox).parent().addClass("not-checked");
+        valid = false;
     }
-}
-getCity();
+    else{
+        $(checkbox).parent().removeClass("not-checked");
+    }
+};
+
+
+$(".calculate__submit").on("click",function (evt) {
+    validation($("#calculate-form"))
+    if(!valid){
+        evt.preventDefault()
+        console.log("error")
+    }
+})
+$(".callback__submit").on("click",function (evt) {
+    validation($("#callback-form"))
+    if(!valid){
+        evt.preventDefault()
+        console.log("error")
+    }
+})
+$(".whatsapp__submit").on("click",function (evt) {
+    validation($("#whatsapp-form"))
+    if(!valid){
+        evt.preventDefault()
+        console.log("error")
+    }
+})
+$(".auth__submit").on("click",function (evt) {
+    validation($("#auth-form"))
+    if(!valid){
+        evt.preventDefault()
+        console.log("error")
+    }
+})
+
+
+$(".personal-data").on("click",function () {
+    if($(this).prop("checked")) {
+    $(this).parent().removeClass("not-checked")
+    }
+})
+
+
+
+// async function getCity() {
+//     let response = await fetch('/php/sypexgeo.php', {
+//         mode: "no-cors", // same-origin, no-cors
+//         redirect: "follow", // manual, error
+//     });
+//     let answer = await response.text();
+//     if(answer !== 'error') {
+//         $('.main-screen__title span').text('в городе ' + answer);
+//         $('.calculate__city').val(answer);
+//     }
+// }
+// getCity();

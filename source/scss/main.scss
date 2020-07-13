@@ -314,7 +314,7 @@ button {
     margin-right: 30px;
     margin-left: auto;
     @media (max-width: $phone-big) {
-      margin-right: 15px;
+      margin-right: 10px;
       font-size: 14px;
       line-height: 1.2;
     }
@@ -1392,9 +1392,17 @@ button {
     line-height: 120%;
     max-width: 100%;
     color: $blue;
-    width: 310px;
     @media (max-width: $desktop-medium) {
       position: absolute;
+    }
+    @media (max-width: $phone-big) {
+      font-size: 150px;
+    }
+  }
+
+  &__map {
+    @media (max-width: $phone-big) {
+      max-width: 100%;
     }
   }
 
@@ -1412,6 +1420,9 @@ button {
     line-height: 120%;
     color: $black;
     display: block;
+    @media (max-width: $phone-big) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -1736,6 +1747,20 @@ button {
     width: 50%;
     padding: 0 100px;
     z-index: 2;
+    @media (max-width: $tablet) {
+      width: 100%;
+      align-items: center;
+    }
+    @media (max-width: $desktop-small) {
+      padding: 0 50px;
+    }
+    @media (max-width: $phone-big) {
+      padding: 0 20px;
+    }
+  }
+
+  &__form {
+    max-width: 100%;
   }
 
   &__input {
@@ -1798,6 +1823,10 @@ button {
     justify-content: center;
     position: relative;
 
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
     svg {
       transition: 300ms ease-in-out all;
       width: 100%;
@@ -1813,7 +1842,7 @@ button {
   }
 
   &__background-img {
-    background: url("../images/menu-theme.jpg") no-repeat;
+    background: url("../images/menu-theme.jpg") no-repeat center;
     filter: blur(5px);
     background-size: cover;
     width: 100%;
@@ -1838,6 +1867,9 @@ button {
         font-size: 34px;
         line-height: 140%;
         color: $black;
+        @media (max-width: $tablet) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -1853,7 +1885,7 @@ button {
   background-size: cover;
   max-width: 1920px;
   margin: 0 auto;
-  @media (max-width: $tablet-small){
+  @media (max-width: $tablet-small) {
     background: url("../images/whatsapp-back.jpg") no-repeat left;
 
   }
@@ -1896,7 +1928,8 @@ button {
   button {
     height: 60px;
     width: 300px;
-    @media (max-width: $tablet-small){
+    max-width: 100%;
+    @media (max-width: $tablet-small) {
       display: block;
       margin-top: 15px;
     }
@@ -1907,19 +1940,58 @@ button {
     }
   }
 
-  &__personal{
+  &__personal {
     display: block;
     margin-top: 20px;
     color: white;
   }
 
-  &__personal-link{
+  &__personal-link {
     color: white;
     text-decoration: underline;
   }
 }
 
+.form-common {
+  &__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: $black;
+  }
 
+  &__subtitle{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text_gray;
+    margin-top: 15px;
+  }
+  &__error,&__success{
+    display: none;
+  }
+
+  &.error{
+    .form-common__error{
+      display: block;
+    }
+    .form-common__posted{
+      display: none;
+    }
+  }
+  &.success{
+    .form-common__success{
+      display: block;
+    }
+    .form-common__posted{
+      display: none;
+    }
+  }
+}
 
 
 

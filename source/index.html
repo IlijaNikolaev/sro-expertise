@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SRO-ex</title>
-    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,16 +35,28 @@
                 <include src="build/images/logo-big.svg"></include>
             </div>
             <div class="popup__content">
-                <p class="popup__title">Обратный звонок</p>
-                <form action="#" method="post" id="callback-form">
-                    <input class="popup__input" type="text" placeholder="Ваше имя" name="callback-name">
-                    <input required class="popup__input" type="tel" placeholder="Ваш телефон" name="callback-phone">
-                    <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a
-                            href="#">персональных
-                        данных</a></label>
-                    <button class="popup__btn main-btn" type="submit">Отправить</button>
+                <form action="#" method="post" id="callback-form" class="popup__form form-common">
+                    <p class="popup__title form-common__posted">Обратный звонок</p>
+                    <div class="form-common__success">
+                        <p class="form-common__title">Благодарим Вас за заявку!</p>
+                        <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
+                    </div>
+                    <div class="form-common__error">
+                        <p class="form-common__title">Произошла ошибка</p>
+                        <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
+                    </div>
+                    <div class="form-common__posted">
+                        <input class="popup__input" type="text" placeholder="Ваше имя" name="callback-name">
+                        <input required class="popup__input" type="tel" placeholder="Ваш телефон" name="callback-phone">
+                        <label class="popup__personal"><input type="checkbox">Даю согласие на обработку <a
+                                href="#">персональных
+                            данных</a></label>
+                        <button class="popup__btn main-btn" type="submit">Отправить</button>
+                    </div>
                 </form>
-                <button class="popup__cross js-popup-toggler"><include src="build/images/cross.svg"></include></button>
+                <button class="popup__cross js-popup-toggler">
+                    <include src="build/images/cross.svg"></include>
+                </button>
             </div>
         </div>
     </div>
@@ -65,7 +77,9 @@
                     <li class="page-menu__item"><a href="#" class="page-menu__link">Контракты</a></li>
                     <li class="page-menu__item"><a href="#" class="page-menu__link">Контакты клиентов</a></li>
                 </ul>
-                <button class="popup__cross js-menu-toggler"><include src="build/images/cross.svg"></include></button>
+                <button class="popup__cross js-menu-toggler">
+                    <include src="build/images/cross.svg"></include>
+                </button>
             </div>
         </div>
     </div>
@@ -132,7 +146,9 @@
                     </a>
                     <p class="sro__price">
                         <span class="sro__br-bold">Стоимость</span>от 20 000 рублей</p>
-                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить
+                        консультацию
+                    </button>
                 </div>
             </div>
 
@@ -151,7 +167,9 @@
                     </a>
                     <p class="sro__price">
                         <span class="sro__br-bold">Стоимость</span>бесплатно</p>
-                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить
+                        консультацию
+                    </button>
                 </div>
             </div>
 
@@ -170,7 +188,9 @@
                     </a>
                     <p class="sro__price">
                         <span class="sro__br-bold">Стоимость</span>от 5 000 рублей</p>
-                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить
+                        консультацию
+                    </button>
                 </div>
             </div>
             <div class="sro__item">
@@ -188,7 +208,9 @@
                     </a>
                     <p class="sro__price">
                         <span class="sro__br-bold">Стоимость</span>от 20 000 рублей</p>
-                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить консультацию</button>
+                    <button class="sro__consult  main-btn main-btn--transparent-blue js-popup-toggler">Получить
+                        консультацию
+                    </button>
                 </div>
             </div>
         </div>
@@ -200,14 +222,24 @@
             <span>Рассчитайте стоимость </span>
             <span>вступления в СРО в вашем регионе</span>
         </h2>
-        <form method="post" action="#" class="content calculate" id="calculate-form">
-            <div class="calculate__wrapper">
+
+        <form method="post" action="#" class="content calculate form-common" id="calculate-form">
+            <div class="form-common__success">
+                <p class="form-common__title">Благодарим Вас за заявку!</p>
+                <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
+            </div>
+            <div class="form-common__error">
+                <p class="form-common__title">Произошла ошибка</p>
+                <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
+            </div>
+            <div class="calculate__wrapper form-common__posted">
                 <div class="calculate__question">
                     <p class="calculate__header">
                         <span class="calculate__number-border"><span class="calculate__number">1</span></span>
                         Вы находитесь в городе:
                     </p>
-                    <input class="calculate__city" type="text" placeholder="Санкт-петербург" name="calculate-city" value="Санкт-Петербург">
+                    <input class="calculate__city" type="text" placeholder="Санкт-петербург" name="calculate-city"
+                           value="Санкт-Петербург">
                 </div>
                 <div class="calculate__question">
                     <p class="calculate__header">
@@ -278,7 +310,7 @@
                     <input class="calculate__total" type="number" name="sum" placeholder="Сумма в рублях">
                 </div>
             </div>
-            <div class="calculate__callback">
+            <div class="calculate__callback form-common__posted">
                 <p class="calculate__callback-title">Рассчитать стоимость</p>
                 <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
                     вступления в СРО по вашему случаю</p>
@@ -292,210 +324,210 @@
         </form>
     </div>
 </section>
-    <section class="container container--white">
-        <div class="section">
-            <h2 class="section-title description__title">
-                <span>Команда специалистов</span>
-                <span>СРО-экспертиза</span>
-            </h2>
+<section class="container container--white">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Команда специалистов</span>
+            <span>СРО-экспертиза</span>
+        </h2>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container swiper-team team">
+        <div class="team__cite">
+            <p class="team__cite-text js-cite-block">Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим
+                своих
+                клиентов и делаем их бизнес лучше каждый день.
+            </p>
+            <include src="build/images/cite.svg"></include>
         </div>
-        <!-- Swiper -->
-        <div class="swiper-container swiper-team team">
-            <div class="team__cite">
-                <p class="team__cite-text js-cite-block">Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим
-                    своих
-                    клиентов и делаем их бизнес лучше каждый день.
-                </p>
-                <include src="build/images/cite.svg"></include>
-            </div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slide1">
-                    <div class="team__slide"
-                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
-                        <img data-src="./images/team1.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="team__slide"
+                     data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                    <img data-src="./images/team1.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
 
-                        </div>
-                        <h2 class="team__slide-title">Кристина Исаева</h2>
-                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
-                        <button class="main-btn team__btn js-popup-toggler  js-popup-toggler ">Начать работу</button>
                     </div>
-                </div>
-                <div class="swiper-slide slide2">
-                    <div class="team__slide"
-                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
-                        <img data-src="./images/team2.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        <h2 class="team__slide-title">Кристина Исаева</h2>
-                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
-                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
-                    </div>
-                </div>
-                <div class="swiper-slide slide3">
-                    <div class="team__slide"
-                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
-                        <img data-src="./images/team3.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-
-                        </div>
-                        <h2 class="team__slide-title">Кристина Исаева</h2>
-                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
-                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
-                    </div>
-                </div>
-                <div class="swiper-slide slide4">
-                    <div class="team__slide"
-                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
-                        <img data-src="./images/team4.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-
-                        </div>
-                        <h2 class="team__slide-title">Кристина Исаева</h2>
-                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
-                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
-                    </div>
-                </div>
-                <div class="swiper-slide slide5">
-                    <div class="team__slide"
-                         data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
-                        <img data-src="./images/team5.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-
-                        </div>
-                        <h2 class="team__slide-title">Кристина Исаева</h2>
-                        <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
-                        <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
-                    </div>
+                    <h2 class="team__slide-title">Кристина Исаева</h2>
+                    <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                    <button class="main-btn team__btn js-popup-toggler  js-popup-toggler ">Начать работу</button>
                 </div>
             </div>
-            <div class="team__arrows-block arrows-block">
-                <div class="button-prev">
-                    <include src="build/images/arrow.svg"></include>
+            <div class="swiper-slide slide2">
+                <div class="team__slide"
+                     data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                    <img data-src="./images/team2.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <h2 class="team__slide-title">Кристина Исаева</h2>
+                    <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                    <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
                 </div>
-                <div class="button-next">
-                    <include src="build/images/arrow.svg"></include>
+            </div>
+            <div class="swiper-slide slide3">
+                <div class="team__slide"
+                     data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                    <img data-src="./images/team3.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                    </div>
+                    <h2 class="team__slide-title">Кристина Исаева</h2>
+                    <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                    <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide4">
+                <div class="team__slide"
+                     data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                    <img data-src="./images/team4.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                    </div>
+                    <h2 class="team__slide-title">Кристина Исаева</h2>
+                    <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                    <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide5">
+                <div class="team__slide"
+                     data-cite="Вот уже 10 лет я работаю в лучшей компании в мире. Мы ценим своих клиентов и делаем их бизнес лучше каждый день.">
+                    <img data-src="./images/team5.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                    </div>
+                    <h2 class="team__slide-title">Кристина Исаева</h2>
+                    <p class="team__slide-subtitle">Менеджер по работе с клиентами</p>
+                    <button class="main-btn team__btn js-popup-toggler ">Начать работу</button>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="container container--grey">
-        <div class="section">
-            <h2 class="section-title description__title">
-                <span>Почему бизнес выбирает нашу</span>
-                <span>компанию для вступления в СРО</span>
-            </h2>
-            <div class="content about">
-                <div class="about__wrapper">
-                    <div class="about__item">
-                        <include src="build/images/about1.svg"></include>
-                        <p class="about__item-title">Бесплатная доставка</p>
-                        <p class="about__item-info">Бесплатная курьерская доставка свидетельства по всей России в
-                            руку</p>
-                    </div>
-                    <div class="about__item">
-                        <include src="build/images/about2.svg"></include>
-                        <p class="about__item-title">Работаем по всей России</p>
-                        <p class="about__item-info">C 2012 года вы выдали более 5000 допусков СРО в 85 регионах
-                            России </p>
-                    </div>
-                    <div class="about__item">
-                        <include src="build/images/about3.svg"></include>
-                        <p class="about__item-title">Помощь на все этапах</p>
-                        <p class="about__item-info">Специалисты НРС внесение в реест, консультации на всех этапах</p>
-                    </div>
-                    <div class="about__item">
-                        <include src="build/images/about4.svg"></include>
-                        <p class="about__item-title">Официальная регистрация</p>
-                        <p class="about__item-info">Наши саморегулируемые организации занесены в реестр Ростехнадзора и
-                            состоят в Нострой</p>
-                    </div>
-                    <div class="about__item">
-                        <include src="build/images/about5.svg"></include>
-                        <p class="about__item-title">Консультации после получения СРО</p>
-                        <p class="about__item-info">Косультации сотрудников после получения СРО, юридическое
-                            сопровождение</p>
-                    </div>
-                    <div class="about__item">
-                        <include src="build/images/about6.svg"></include>
-                        <p class="about__item-title">Бесплатная юридическая помощь</p>
-                        <p class="about__item-info">Бесплатное юридическое сопровождение на всех этапах
-                            сотрудничества</p>
-                    </div>
+        <div class="team__arrows-block arrows-block">
+            <div class="button-prev">
+                <include src="build/images/arrow.svg"></include>
+            </div>
+            <div class="button-next">
+                <include src="build/images/arrow.svg"></include>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container container--grey">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Почему бизнес выбирает нашу</span>
+            <span>компанию для вступления в СРО</span>
+        </h2>
+        <div class="content about">
+            <div class="about__wrapper">
+                <div class="about__item">
+                    <include src="build/images/about1.svg"></include>
+                    <p class="about__item-title">Бесплатная доставка</p>
+                    <p class="about__item-info">Бесплатная курьерская доставка свидетельства по всей России в
+                        руку</p>
+                </div>
+                <div class="about__item">
+                    <include src="build/images/about2.svg"></include>
+                    <p class="about__item-title">Работаем по всей России</p>
+                    <p class="about__item-info">C 2012 года вы выдали более 5000 допусков СРО в 85 регионах
+                        России </p>
+                </div>
+                <div class="about__item">
+                    <include src="build/images/about3.svg"></include>
+                    <p class="about__item-title">Помощь на все этапах</p>
+                    <p class="about__item-info">Специалисты НРС внесение в реест, консультации на всех этапах</p>
+                </div>
+                <div class="about__item">
+                    <include src="build/images/about4.svg"></include>
+                    <p class="about__item-title">Официальная регистрация</p>
+                    <p class="about__item-info">Наши саморегулируемые организации занесены в реестр Ростехнадзора и
+                        состоят в Нострой</p>
+                </div>
+                <div class="about__item">
+                    <include src="build/images/about5.svg"></include>
+                    <p class="about__item-title">Консультации после получения СРО</p>
+                    <p class="about__item-info">Косультации сотрудников после получения СРО, юридическое
+                        сопровождение</p>
+                </div>
+                <div class="about__item">
+                    <include src="build/images/about6.svg"></include>
+                    <p class="about__item-title">Бесплатная юридическая помощь</p>
+                    <p class="about__item-info">Бесплатное юридическое сопровождение на всех этапах
+                        сотрудничества</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="container container--white">
-        <div class="section">
-            <h2 class="section-title description__title">
-                <span>Сравните решения</span>
-                <span>и убедитесь сами</span>
-            </h2>
-            <div class="content compare">
-                <div class="compare__item">
-                    <p class="compare__title">СРО-Экспертиза</p>
-                    <div class="compare__block">
-                        <ul class="compare__list compare__list--blue">
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Подбор СРО</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Рассмотрение зявки</p>
-                                <p class="compare__list-item-info">До 1 месяца</p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Срок вступления</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Оформление документов</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Оплата</p>
-                                <p class="compare__list-item-info">Напрямую в СРО</p>
-                            </li>
-                        </ul>
-                    </div>
+    </div>
+</section>
+<section class="container container--white">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Сравните решения</span>
+            <span>и убедитесь сами</span>
+        </h2>
+        <div class="content compare">
+            <div class="compare__item">
+                <p class="compare__title">СРО-Экспертиза</p>
+                <div class="compare__block">
+                    <ul class="compare__list compare__list--blue">
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Подбор СРО</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Рассмотрение зявки</p>
+                            <p class="compare__list-item-info">До 1 месяца</p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Срок вступления</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Оформление документов</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Оплата</p>
+                            <p class="compare__list-item-info">Напрямую в СРО</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="compare__item">
-                    <p class="compare__title">Самостоятельное получение</p>
-                    <div class="compare__block">
-                        <ul class="compare__list">
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Подбор СРО</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Рассмотрение зявки</p>
-                                <p class="compare__list-item-info">До 1 месяца</p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Срок вступления</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Оформление документов</p>
-                                <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
-                                    СРО-экспертиза </p>
-                            </li>
-                            <li class="compare__list-item">
-                                <p class="compare__list-item-title">Оплата</p>
-                                <p class="compare__list-item-info">Напрямую в СРО</p>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="compare__item">
+                <p class="compare__title">Самостоятельное получение</p>
+                <div class="compare__block">
+                    <ul class="compare__list">
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Подбор СРО</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Рассмотрение зявки</p>
+                            <p class="compare__list-item-info">До 1 месяца</p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Срок вступления</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Оформление документов</p>
+                            <p class="compare__list-item-info">Сравните самостоятельное получение допуска и через
+                                СРО-экспертиза </p>
+                        </li>
+                        <li class="compare__list-item">
+                            <p class="compare__list-item-title">Оплата</p>
+                            <p class="compare__list-item-info">Напрямую в СРО</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-<section class="container container--green whatsapp" >
+    </div>
+</section>
+<section class="container container--green whatsapp">
     <div class="section">
         <h2 class="section-title">
             <span>Свяжитесь с нами</span>
@@ -503,105 +535,117 @@
         </h2>
         <div class="content--wide whatsapp__back">
             <p class="whatsapp__subtitle">Получите бесплатную консультацию и ответы на все вопросы</p>
-            <form method="post" action="" id="whatsapp-form" class="whatsapp__form">
-                <input type="text" class="whatsapp__input" name="whtsapp" placeholder="Введите свой номер в WhatsApp">
-                <include src="build/images/whatsapp-icon.svg"></include>
-                <button class="main-btn main-btn--transparent-white">Отправить запрос</button>
-                <label class="whatsapp__personal"><input type="checkbox">Даю согласие на обработку <a class="whatsapp__personal-link">персональных данных</a></label>
+            <form method="post" action="" id="whatsapp-form" class="whatsapp__form form-common">
+                <div class="form-common__success">
+                    <p class="form-common__title">Благодарим Вас за заявку!</p>
+                    <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
+                </div>
+                <div class="form-common__error">
+                    <p class="form-common__title">Произошла ошибка</p>
+                    <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
+                </div>
+                <div class="form-common__posted">
+                    <input type="text" class="whatsapp__input" name="whtsapp"
+                           placeholder="Введите свой номер в WhatsApp">
+                    <include src="build/images/whatsapp-icon.svg"></include>
+                    <button class="main-btn main-btn--transparent-white">Отправить запрос</button>
+                    <label class="whatsapp__personal"><input type="checkbox">Даю согласие на обработку <a
+                            class="whatsapp__personal-link">персональных данных</a></label>
+                </div>
             </form>
         </div>
     </div>
 </section>
-    <section class="container container--white ">
-        <div class="section stages">
-            <div class="stages__left"><h2 class="section-title description__title">
-                <span>Этапы вступления в СРО <br>с нашей помощью</span>
-            </h2>
-                <p class="stages__subtitle">Сравните самостоятельное получение допуска и через СРО-экспертиза</p>
-                <button class="stages__btn main-btn js-popup-toggler">Заказать звонок</button>
-            </div>
-            <div class="stages__right">
-                <ul class="stages__list">
-                    <li class="stages__list-item"><span class="stages__number">1</span>
-                        <p class="stages__title">Оформите заявку</p>
-                        <p class="stages__info">Подайте заявление на сайте или по телефону <br> <a class="stages__phone"
-                                                                                                   href="tel:+78003506001">8
-                            (800) 350-60-01</a>. Менеджер
-                            свяжется с вами для уточнения всех деталей</p>
-                    </li>
-                    <li class="stages__list-item"><span class="stages__number">2</span>
-                        <p class="stages__title">Подбор СРО</p>
-                        <p class="stages__info">Мы детально рассмотрим Ваш запрос <br> и подберем необходимое СРО <br>
-                            по вашим требованиям</p>
-                    </li>
-                    <li class="stages__list-item"><span class="stages__number">3</span>
-                        <p class="stages__title">Заключение договора</p>
-                        <p class="stages__info">Подготовим необходимый пакет документов, и проконсультируем об оплате
-                            взносов</p>
-                    </li>
-                    <li class="stages__list-item"><span class="stages__number">4</span>
-                        <p class="stages__title">Получение копий документов</p>
-                        <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
-                            работ на законных и сертифицированных основаниях</p>
-                    </li>
-                    <li class="stages__list-item"><span class="stages__number">5</span>
-                        <p class="stages__title">Получение оригиналов документов</p>
-                        <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
-                            работ на законных и сертифицированных основаниях</p>
-                    </li>
-                </ul>
-            </div>
+<section class="container container--white ">
+    <div class="section stages">
+        <div class="stages__left"><h2 class="section-title description__title">
+            <span>Этапы вступления в СРО <br>с нашей помощью</span>
+        </h2>
+            <p class="stages__subtitle">Сравните самостоятельное получение допуска и через СРО-экспертиза</p>
+            <button class="stages__btn main-btn js-popup-toggler">Заказать звонок</button>
         </div>
-    </section>
-    <section class="container">
-        <div class="section">
-            <h2 class="section-title description__title">
-                <span>Пакет документов, которые вы</span>
-                <span>получите по оконочанию работ</span>
-            </h2>
-            <div class="content content--wide documents">
-                <div class="swiper-container swiper-documents documents__slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img data-src="./images/document.png" class="swiper-lazy documents__img">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img data-src="./images/document.png" class="swiper-lazy documents__img">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img data-src="./images/document.png" class="swiper-lazy documents__img">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img data-src="./images/document.png" class="swiper-lazy documents__img">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img data-src="./images/document.png" class="swiper-lazy documents__img">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        <div class="stages__right">
+            <ul class="stages__list">
+                <li class="stages__list-item"><span class="stages__number">1</span>
+                    <p class="stages__title">Оформите заявку</p>
+                    <p class="stages__info">Подайте заявление на сайте или по телефону <br> <a class="stages__phone"
+                                                                                               href="tel:+78003506001">8
+                        (800) 350-60-01</a>. Менеджер
+                        свяжется с вами для уточнения всех деталей</p>
+                </li>
+                <li class="stages__list-item"><span class="stages__number">2</span>
+                    <p class="stages__title">Подбор СРО</p>
+                    <p class="stages__info">Мы детально рассмотрим Ваш запрос <br> и подберем необходимое СРО <br>
+                        по вашим требованиям</p>
+                </li>
+                <li class="stages__list-item"><span class="stages__number">3</span>
+                    <p class="stages__title">Заключение договора</p>
+                    <p class="stages__info">Подготовим необходимый пакет документов, и проконсультируем об оплате
+                        взносов</p>
+                </li>
+                <li class="stages__list-item"><span class="stages__number">4</span>
+                    <p class="stages__title">Получение копий документов</p>
+                    <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
+                        работ на законных и сертифицированных основаниях</p>
+                </li>
+                <li class="stages__list-item"><span class="stages__number">5</span>
+                    <p class="stages__title">Получение оригиналов документов</p>
+                    <p class="stages__info">Уже на этой стадии вы сможете полноценно начать выполнение строительных
+                        работ на законных и сертифицированных основаниях</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="section">
+        <h2 class="section-title description__title">
+            <span>Пакет документов, которые вы</span>
+            <span>получите по оконочанию работ</span>
+        </h2>
+        <div class="content content--wide documents">
+            <div class="swiper-container swiper-documents documents__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy documents__img">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
                         </div>
                     </div>
-
-
-                    <div class="documents__arrows-block arrows-block">
-                        <div class="button-prev">
-                            <include src="build/images/arrow.svg"></include>
-                        </div>
-                        <div class="button-next">
-                            <include src="build/images/arrow.svg"></include>
-                        </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy documents__img">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
-                    <div class="documents__pagination swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy documents__img">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy documents__img">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="./images/document.png" class="swiper-lazy documents__img">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
                 </div>
 
+
+                <div class="documents__arrows-block arrows-block">
+                    <div class="button-prev">
+                        <include src="build/images/arrow.svg"></include>
+                    </div>
+                    <div class="button-next">
+                        <include src="build/images/arrow.svg"></include>
+                    </div>
+                </div>
+                <div class="documents__pagination swiper-pagination"></div>
             </div>
 
         </div>
-        </div>
-    </section>
+
+    </div>
+    </div>
+</section>
 
 </section>
 <section class="container">
@@ -681,12 +725,22 @@
         <div class="content auth">
             <p class="auth__info">Введите данные и узнайте решение через 1-2 минуты</p>
             <div class="auth__wrapper">
-                <form action="" method="post" id="auth-form" class="auth__form">
-                    <input type="text" class="auth__input auth-name" placeholder="Название организации" name="name">
-                    <input type="text" class="auth__input auth-inn" placeholder="ИНН" name="inn">
-                    <input type="text" class="auth__input auth-fio" placeholder="ФИО собственника" name="fio">
-                    <input type="text" class="auth__input auth-phone" placeholder="Номер телефона" name="phone">
-                    <button class="main-btn auth__submit" type="submit">отправить запрос</button>
+                <form action="" method="post" id="auth-form" class="auth__form form-common">
+                    <div class="form-common__success">
+                        <p class="form-common__title">Благодарим Вас за заявку!</p>
+                        <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
+                    </div>
+                    <div class="form-common__error">
+                        <p class="form-common__title">Произошла ошибка</p>
+                        <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
+                    </div>
+                    <div class="form-common__posted"><input type="text" class="auth__input auth-name"
+                                                            placeholder="Название организации" name="name">
+                        <input type="text" class="auth__input auth-inn" placeholder="ИНН" name="inn">
+                        <input type="text" class="auth__input auth-fio" placeholder="ФИО собственника" name="fio">
+                        <input type="text" class="auth__input auth-phone" placeholder="Номер телефона" name="phone">
+                        <button class="main-btn auth__submit" type="submit">отправить запрос</button>
+                    </div>
                 </form>
                 <img class="auth__img" src="images/gerb.png">
             </div>

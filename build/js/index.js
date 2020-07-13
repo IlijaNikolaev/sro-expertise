@@ -4,7 +4,6 @@ var team = new Swiper('.swiper-team', {
     lazy: true,
     loop:true,
     breakpoints: {
-        // when window width is >= 320px
         350: {
             slidesPerView: 1.4,
             spaceBetween: 20
@@ -25,12 +24,10 @@ var team = new Swiper('.swiper-team', {
             slidesPerView: 3,
             spaceBetween: 20
         },
-        // when window width is >= 480px
         1510: {
             slidesPerView: 4,
             spaceBetween: 20
         },
-        // when window width is >= 640px
         1920: {
             slidesPerView: 5,
             spaceBetween: 20
@@ -51,7 +48,6 @@ var documents = new Swiper('.swiper-documents', {
         el: '.documents__pagination'
     },
     breakpoints: {
-        // when window width is >= 320px
         350: {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -94,7 +90,6 @@ var accreditadion = new Swiper('.swiper-accreditadion', {
         el: '.accreditadion__pagination'
     },
     breakpoints: {
-        // when window width is >= 320px
         350: {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -158,7 +153,6 @@ popups.menuToggler.on("click",function () {
 for (let i = 1;i< 6;i++) {
         let slide = ".team .slide"+i;
     $(slide).on("click", function () {
-        console.log(slide)
         team.slideToLoop(i -1, 500, true);
 
     })

@@ -158,18 +158,6 @@ for (let i = 1;i< 6;i++) {
     })
 }
 
-// $('.team .swiper-slide').each(function (index, value) {
-//     $(this).on("click",function () {
-//         console.log(index)
-//         if(index>10){
-//             team.slideToLoop(index-10, 500, true);
-//         }
-//         else {
-//             team.slideToLoop(index-3, 500, true);
-//         }
-//     })
-//     // console.log(index);
-// });
 (function($) {
     $.fn.inputFilter = function(inputFilter) {
         return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
@@ -220,28 +208,24 @@ $(".calculate__submit").on("click",function (evt) {
     validation($("#calculate-form"))
     if(!valid){
         evt.preventDefault()
-        console.log("error")
     }
 })
 $(".callback__submit").on("click",function (evt) {
     validation($("#callback-form"))
     if(!valid){
         evt.preventDefault()
-        console.log("error")
     }
 })
 $(".whatsapp__submit").on("click",function (evt) {
     validation($("#whatsapp-form"))
     if(!valid){
         evt.preventDefault()
-        console.log("error")
     }
 })
 $(".auth__submit").on("click",function (evt) {
     validation($("#auth-form"))
     if(!valid){
         evt.preventDefault()
-        console.log("error")
     }
 })
 

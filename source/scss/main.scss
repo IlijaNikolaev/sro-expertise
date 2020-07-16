@@ -368,6 +368,8 @@ button {
     span {
       display: block;
       padding-left: 130px;
+      position: relative;
+      text-decoration: underline;
       @media (max-width: $tablet) {
         padding-left: 0;
       }
@@ -474,7 +476,7 @@ button {
     text-align: center;
     font-family: "Inter";
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 60px;
     color: $blue;
     margin-bottom: 10px;
@@ -576,6 +578,7 @@ button {
 
   &__download {
     padding-top: 5px;
+    cursor: pointer;
     @media (max-width: $tablet-small) {
       margin: 20px 0;
     }
@@ -606,11 +609,15 @@ button {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    @media (min-width: $tablet) {
+      line-height: 45px;
+    }
   }
 
   &__get-offer {
     font-style: normal;
     font-weight: 500;
+    display: none;
     font-size: 14px;
     line-height: 17px;
     color: $text_gray;
@@ -631,7 +638,25 @@ button {
 
 .calculate {
 
+  &__personal{
+    color: white;
+    margin-top: 10px;
+    display: block;
+  }
+
   max-width: 1350px;
+  box-shadow: 5px 0px 37px -13px grey;
+  border-radius: 10px;
+  padding: 35px;
+  @media (max-width: $tablet){
+    padding: 20px;
+  }
+  @media (max-width: $tablet-small){
+    padding: 15px;
+  }
+  @media (max-width: $phone-big){
+    padding: 10px;
+  }
 
   &__header {
     font-style: normal;
@@ -884,17 +909,17 @@ button {
 }
 
 .team {
-  height: 710px;
+  height: 725px;
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
   padding: 50px 15px 0 15px;
   @media (max-width: $tablet-small) {
-    height: 600px;
+    height: 615px;
   }
   @media (max-width: $phone-big) {
     padding: 0 15px;
-    height: 430px;
+    height: 445px;
   }
 
   &__slide {
@@ -932,6 +957,7 @@ button {
 
   &__btn {
     display: none;
+    margin-top: 15px;
   }
 
   &__cite {
@@ -1050,7 +1076,7 @@ button {
 
 .compare {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
   @media (max-width: $tablet) {
     display: block;
@@ -1067,6 +1093,10 @@ button {
     @media (max-width: $tablet) {
       margin-bottom: 10px;
     }
+    @media (max-width: $desktop-small) {
+      font-size: 26px;
+    }
+
 
   }
 
@@ -1085,7 +1115,15 @@ button {
     }
   }
 
+  &__block{
+    height: 100%;
+  }
+
   &__list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
     width: 580px;
     max-width: 100%;
     border: 1px solid #c4c4c4;
@@ -1094,7 +1132,15 @@ button {
 
   &__list-item {
     padding: 30px;
+    cursor: pointer;
     list-style: none;
+    height: 17%;
+    &:hover{
+      background: $blue;
+      p{
+        color: white;
+      }
+    }
     @media (max-width: $phone-big) {
       padding: 20px 10px;
     }
@@ -1121,7 +1167,6 @@ button {
     font-size: 16px;
     line-height: 150%;
     color: #676767;
-    max-width: 60%;
     @media (max-width: $tablet-small) {
       max-width: 100%;
     }
@@ -1133,6 +1178,13 @@ button {
 
     * {
       color: white;
+    }
+
+    .compare__list-item:hover{
+      background: white;
+      p{
+        color:$blue;
+      }
     }
   }
 }
@@ -1360,6 +1412,7 @@ button {
     font-size: 16px;
     line-height: 140%;
     color: $text_gray;
+    display: none;
     max-width: 250px;
     margin-top: 10px;
   }
@@ -1372,6 +1425,7 @@ button {
     line-height: 22px;
     color: $blue;
     margin-top: 30px;
+    display: none;
   }
 }
 
@@ -1784,6 +1838,7 @@ button {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
+    cursor: pointer;
     font-size: 14px;
     line-height: 17px;
     color: #313131;

@@ -909,17 +909,17 @@ button {
 }
 
 .team {
-  height: 725px;
+  height: 750px;
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
   padding: 50px 15px 0 15px;
   @media (max-width: $tablet-small) {
-    height: 615px;
+    height: 650px;
   }
   @media (max-width: $phone-big) {
     padding: 0 15px;
-    height: 445px;
+    height: 500px;
   }
 
   &__slide {

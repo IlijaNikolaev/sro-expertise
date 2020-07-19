@@ -65,3 +65,26 @@ $("#auth-form").submit(function(e) {
     });
 
 });
+
+$("#whatsapp-form").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var url = form.attr('action');
+
+    $.ajax({
+        type: "POST",
+        url: '/php/whatsApp.php',
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+            if(data === 'success') {
+                form.addClass('success');
+            } else if(data === 'error') {
+                form.addClass('error');
+            }
+        }
+    });
+
+});

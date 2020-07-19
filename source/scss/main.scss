@@ -258,6 +258,8 @@ button {
 
   &__whatsapp {
     margin-right: 30px;
+    text-align: center;
+    line-height: 50px;
     @media (max-width: $tablet) {
       display: none;
     }
@@ -638,6 +640,12 @@ button {
 
 .calculate {
 
+  &__label {
+    @media (max-width: $desktop-small) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__personal {
     color: white;
     margin-top: 10px;
@@ -729,7 +737,7 @@ button {
 
   &__text-input {
     width: 260px;
-    max-width: 23%;
+    max-width: 100%;
     height: 50px;
     border: 1px solid #FFFFFF;
     border-radius: 3px;
@@ -738,7 +746,6 @@ button {
     padding-left: 15px;
     outline: none;
     @media (max-width: $desktop-small) {
-      margin-bottom: 20px;
       width: 280px;
       max-width: 100%;
     }
@@ -1940,11 +1947,17 @@ button {
 }
 
 .whatsapp {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   min-height: 400px;
   padding: 50px 15px 75px 15px;
+
+  &__personal {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 
   &__img {
     position: absolute;
@@ -1959,7 +1972,7 @@ button {
     }
   }
 
-  &__form{
+  &__form {
     width: 55%;
     margin-left: auto;
     @media (max-width: $tablet) {
@@ -1969,14 +1982,14 @@ button {
 
   }
 
-  &__title{
+  &__title {
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
     color: $green;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
@@ -1988,14 +2001,14 @@ button {
     color: $black;
   }
 
-  &__btn{
+  &__btn {
     @media (max-width: $tablet) {
       display: block;
       margin-top: 30px;
     }
   }
 
-  &__phone{
+  &__phone {
     height: 50px;
     background: $section_gray;
     border-radius: 3px;
@@ -2006,17 +2019,21 @@ button {
 
   }
 
-  &__label{
+  &__label {
     position: relative;
-    &:before{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 250px;
+    max-width: 100%;
+
+    &:before {
       content: url("../images/whatsapp-icon.svg");
       width: auto;
       height: auto;
       display: block;
       position: absolute;
       left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 15px;
       z-index: 3;
     }
   }
@@ -2079,6 +2096,15 @@ button {
   border: 1px solid red;
 }
 
+.error-message {
+  display: none;
+  color: red;
+  font-size: 16px;
+
+  &.active {
+    display: block;
+  }
+}
 
 
 

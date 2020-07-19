@@ -41,7 +41,7 @@
             <span class="main-header__btn-text">меню</span>
         </button>
         <a class="main-header__phone" href="tel:+78003506001">8 (800) 350-60-01</a>
-        <button class="main-header__whatsapp main-btn main-btn--whatsapp">cвязаться в whatsapp</button>
+        <a href="#whatsapp" class="main-header__whatsapp main-btn main-btn--whatsapp">cвязаться в whatsapp</a>
         <button class="main-header__callback main-btn js-popup-toggler">заказать звонок</button>
     </div>
 
@@ -64,8 +64,11 @@
                     </div>
                     <div class="form-common__posted">
                         <input class="required popup__input" type="text" placeholder="Ваше имя" name="callback-name">
+                        <p class="error-message">Введите Ваше имя</p>
                         <input class=" required popup__input phone-input" type="tel" placeholder="Ваш телефон"
                                name="callback-phone">
+                        <p class="error-message">Введите Ваш номер телефона</p>
+
                         <label class="popup__personal"><input type="checkbox" class="personal-data">Даю согласие на
                             обработку персональных данных</label>
                         <button class="popup__btn main-btn callback__submit" type="submit">Отправить</button>
@@ -332,12 +335,22 @@
                 <p class="calculate__callback-subtitle">Наш специалист свяжется с вами и проконсультирует по стоимости
                     вступления в СРО по вашему случаю</p>
                 <div class="calculate__inputs-block">
-                    <input type="text" class="required calculate__text-input" placeholder="Ваше имя"
-                           name="calculate-name">
-                    <input type="text" class="required calculate__text-input phone-input" placeholder="Ваш телефон"
-                           name="calculate-phone">
-                    <input type="text" class="required calculate__text-input" placeholder="Ваша почта"
-                           name="calculate-email">
+                    <label class="calculate__label"><input type="text" class="required calculate__text-input"
+                                                           placeholder="Ваше имя"
+                                                           name="calculate-name">
+                        <p class="error-message">Введите Ваше Имя</p>
+                    </label>
+                    <label class="calculate__label"><input type="text"
+                                                           class="required calculate__text-input phone-input"
+                                                           placeholder="Ваш телефон"
+                                                           name="calculate-phone">
+                        <p class="error-message">Введите Ваш номер телефона</p>
+                    </label>
+                    <label class="calculate__label"><input type="text" class="required calculate__text-input"
+                                                           placeholder="Ваша почта"
+                                                           name="calculate-email">
+                        <p class="error-message">Введите Вашу почту</p>
+                    </label>
                     <button type="submit" class="main-btn calculate__submit">отправить</button>
                 </div>
                 <label class="calculate__personal"><input type="checkbox" class="personal-data">Даю согласие на
@@ -553,11 +566,11 @@
         </div>
     </div>
 </section>
-<section class="container container--white">
+<section class="container container--white" id="whatsapp">
     <div class="section">
         <div class="content whatsapp">
             <img src="images/phone-whatsapp.png" class="whatsapp__img" alt="Связаться в Whatsapp">
-            <form class="whatsapp__form form-common" action="" method="post">
+            <form class="whatsapp__form form-common" action="" method="post" id="whatsapp-form">
                 <div class="form-common__success">
                     <p class="form-common__title">Благодарим Вас за заявку!</p>
                     <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
@@ -568,13 +581,17 @@
                 </div>
                 <div class="form-common__posted">
                     <h2 class="whatsapp__title section-title">Свяжитесь с нами <br>
-                    в WhatsApp</h2>
+                        в WhatsApp</h2>
                     <p class="whatsapp__subtitle">Получите бесплатную консультацию и ответы на все вопросы</p>
                     <label class="whatsapp__label">
-                        <input placeholder="Введите свой номер в WhatsApp" type="text"
-                               class="phone-input whatsapp__phone" name="whatsapp__phone">
+                        <input placeholder="Введите номер в WhatsApp" type="text"
+                               class="phone-input whatsapp__phone required" name="whatsapp__phone">
+                        <p class="error-message">Введите ваш номер телефона</p>
                     </label>
-                    <button class="main-btn whatsapp__btn">Отправить запрос</button>
+                    <button class="main-btn whatsapp__btn whatsapp__submit">Отправить запрос</button>
+                    <label class="whatsapp__personal"> <input type="checkbox" class="personal-data">Даю согласие на
+                        обработку персональных данных
+                    </label>
                 </div>
             </form>
         </div>

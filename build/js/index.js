@@ -189,9 +189,11 @@ const validation = function (form) {
     input.each(function (index, value) {
         if ($(value).val().length === 0) {
             $(value).addClass("empty__input");
+            $(value).next(".error-message").addClass("active");
             valid = false;
         } else {
             $(value).removeClass("empty__input");
+            $(value).next(".error-message").removeClass("active");
         }
     });
     if (!checkbox.prop("checked")) {

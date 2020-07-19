@@ -521,7 +521,7 @@ button {
     background: #FFFFFF;
     max-width: 1100px;
     padding: 30px 6% 50px 30px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     @media (max-width: $phone-big) {
       padding: 15px 10px;
     }
@@ -638,23 +638,23 @@ button {
 
 .calculate {
 
-  &__personal{
+  &__personal {
     color: white;
     margin-top: 10px;
     display: block;
   }
 
   max-width: 1350px;
-  box-shadow: 5px 0px 37px -13px grey;
+  box-shadow: 5px 0 37px -13px grey;
   border-radius: 10px;
   padding: 35px;
-  @media (max-width: $tablet){
+  @media (max-width: $tablet) {
     padding: 20px;
   }
-  @media (max-width: $tablet-small){
+  @media (max-width: $tablet-small) {
     padding: 15px;
   }
-  @media (max-width: $phone-big){
+  @media (max-width: $phone-big) {
     padding: 10px;
   }
 
@@ -1115,7 +1115,7 @@ button {
     }
   }
 
-  &__block{
+  &__block {
     height: 100%;
   }
 
@@ -1135,12 +1135,15 @@ button {
     cursor: pointer;
     list-style: none;
     height: 17%;
-    &:hover{
+
+    &:hover {
       background: $blue;
-      p{
+
+      p {
         color: white;
       }
     }
+
     @media (max-width: $phone-big) {
       padding: 20px 10px;
     }
@@ -1180,10 +1183,11 @@ button {
       color: white;
     }
 
-    .compare__list-item:hover{
+    .compare__list-item:hover {
       background: white;
-      p{
-        color:$blue;
+
+      p {
+        color: $blue;
       }
     }
   }
@@ -1936,74 +1940,69 @@ button {
 }
 
 .whatsapp {
-  background: url("../images/whatsapp-back.jpg") no-repeat center;
-  background-size: cover;
-  max-width: 1920px;
-  margin: 0 auto;
-  @media (max-width: $tablet-small) {
-    background: url("../images/whatsapp-back.jpg") no-repeat left;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 400px;
+  padding: 50px 15px 75px 15px;
 
-  }
-
-  .section-title span {
-    color: white;
-  }
-
-  &__input {
-    width: 300px;
-    height: 60px;
-    background: #FFFFFF;
-    border-radius: 3px;
-    border: none;
-    padding-left: 35px;
-    outline: none;
-    max-width: 100%;
-  }
-
-  &__form {
-    position: relative;
-  }
-
-  svg {
+  &__img {
     position: absolute;
-    left: 5px;
-    top: 17px;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  &__subtitle {
+  &__form{
+    width: 50%;
+    margin-left: auto;
+  }
+
+  &__title{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 120%;
+    color: $green;
+  }
+
+  &__subtitle{
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 140%;
-    color: #FFFFFF;
-    margin-bottom: 50px;
-  }
-
-  button {
-    height: 60px;
-    width: 300px;
-    max-width: 100%;
-    @media (max-width: $tablet-small) {
-      display: block;
-      margin-top: 15px;
-    }
-
-    &:hover {
-      background: white;
-      color: $green;
-    }
-  }
-
-  &__personal {
-    display: block;
     margin-top: 20px;
-    color: white;
+    margin-bottom: 30px;
+    max-width: 370px;
+    color: $black;
   }
 
-  &__personal-link {
-    color: white;
-    text-decoration: underline;
+  &__phone{
+    height: 50px;
+    background: $section_gray;
+    border-radius: 3px;
+    padding-left: 55px;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+
+  }
+
+  &__label{
+    position: relative;
+    &:before{
+      content: url("../images/whatsapp-icon.svg");
+      width: auto;
+      height: auto;
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+    }
   }
 }
 
@@ -2017,7 +2016,7 @@ button {
     color: $black;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -2026,37 +2025,42 @@ button {
     color: $text_gray;
     margin-top: 15px;
   }
-  &__error,&__success{
+
+  &__error, &__success {
     display: none;
   }
 
-  &.error{
-    .form-common__error{
+  &.error {
+    .form-common__error {
       display: block;
     }
-    .form-common__posted{
+
+    .form-common__posted {
       display: none;
     }
   }
-  &.success{
-    .form-common__success{
+
+  &.success {
+    .form-common__success {
       display: block;
     }
-    .form-common__posted{
+
+    .form-common__posted {
       display: none;
     }
   }
 }
 
-.not-checked{
+.not-checked {
   color: red;
-  a{
+
+  a {
     color: red;
   }
 }
 
-.empty__input{
-  border:1px solid red;
+.empty__input {
+  border: 1px solid red;
 }
 
 

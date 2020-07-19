@@ -557,15 +557,25 @@
     <div class="section">
         <div class="content whatsapp">
             <img src="images/phone-whatsapp.png" class="whatsapp__img" alt="Связаться в Whatsapp">
-            <form class="whatsapp__form" action="" method="post">
-                <h2 class="whatsapp__title">Свяжитесь с нами <br>
+            <form class="whatsapp__form form-common" action="" method="post">
+                <div class="form-common__success">
+                    <p class="form-common__title">Благодарим Вас за заявку!</p>
+                    <p class="form-common__subtitle">Мы свяжемся с Вами в ближайшее время</p>
+                </div>
+                <div class="form-common__error">
+                    <p class="form-common__title">Произошла ошибка</p>
+                    <p class="form-common__subtitle">Пожалуйста, попробуйте еще раз</p>
+                </div>
+                <div class="form-common__posted">
+                    <h2 class="whatsapp__title section-title">Свяжитесь с нами <br>
                     в WhatsApp</h2>
-                <p class="whatsapp__subtitle">Получите бесплатную консультацию и ответы на все вопросы</p>
-                <label class="whatsapp__label">
-                    <input placeholder="Введите свой номер в WhatsApp" type="text"
-                          class="phone-input whatsapp__phone" name="whatsapp__phone">
-                </label>
-                <button class="main-btn whatsapp__btn">Отправить запрос</button>
+                    <p class="whatsapp__subtitle">Получите бесплатную консультацию и ответы на все вопросы</p>
+                    <label class="whatsapp__label">
+                        <input placeholder="Введите свой номер в WhatsApp" type="text"
+                               class="phone-input whatsapp__phone" name="whatsapp__phone">
+                    </label>
+                    <button class="main-btn whatsapp__btn">Отправить запрос</button>
+                </div>
             </form>
         </div>
     </div>

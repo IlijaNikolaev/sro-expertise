@@ -364,7 +364,7 @@ button {
   &__title {
     font-family: "Inter";
     font-style: normal;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 80px;
     line-height: 110%;
     color: #FFFFFF;
@@ -385,7 +385,7 @@ button {
       display: block;
       padding-left: 130px;
       position: relative;
-      text-decoration: underline;
+      font-weight: 600;
       @media (max-width: $tablet) {
         padding-left: 0;
       }
@@ -2113,9 +2113,4 @@ button {
     display: block;
   }
 }
-
-
-
-
-
 

@@ -183,10 +183,12 @@ button {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
   letter-spacing: 0.02em;
   color: #FFFFFF;
   text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
 
   &:hover {
     background: darken($blue, 5%);
@@ -211,6 +213,7 @@ button {
     &:hover {
       background: $blue;
       color: white;
+      border: 1px solid $blue;
     }
   }
 
@@ -299,6 +302,10 @@ button {
     @media (max-width: $tablet) {
       order: 1;
     }
+
+    svg,span{
+      vertical-align: middle;
+    }
   }
 
   &__btn-text {
@@ -334,6 +341,13 @@ button {
   }
   @media (max-width: $phone-big) {
     height: 500px;
+  }
+
+  &__btn-wrapper{
+    display: flex;
+    @media (max-width: $tablet-small){
+      flex-direction: column;
+    }
   }
 
   &__wrapper {
@@ -430,6 +444,8 @@ button {
     @media (max-width: $tablet-small) {
       display: block;
       margin-top: 15px;
+      text-align: center;
+      line-height: 50px;
       color: white;
       background: $green;
     }
@@ -453,29 +469,27 @@ button {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     @media (max-width: $tablet-small) {
-      flex-wrap: wrap;
       justify-content: flex-start;
-    }
-    @media (max-width: $phone-big) {
-
     }
   }
 
   &__numbers-item {
     list-style: none;
-    @media (max-width: $tablet-small) {
+    width: 25%;
+    text-align: left;
+    @media (max-width: $tablet) {
       width: 45%;
       margin-bottom: 30px;
     }
-    @media (max-width: $phone-big) {
+    @media (max-width: $tablet-small) {
       width: 100%;
     }
   }
 
   &__number {
     display: block;
-    text-align: center;
     font-family: "Inter";
     font-style: normal;
     font-weight: bold;
@@ -916,23 +930,21 @@ button {
 }
 
 .team {
-  height: 750px;
+  height: auto;
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 50px 15px 0 15px;
-  @media (max-width: $tablet-small) {
-    height: 650px;
-  }
+  padding: 50px 15px 50px 15px;
+
   @media (max-width: $phone-big) {
     padding: 0 15px;
-    height: 500px;
   }
 
   &__slide {
     width: 320px;
     height: 450px;
     margin: 45px 0 0 auto;
+    padding-bottom: 20px;
     @media (max-width: $tablet-small) {
       margin: 0 auto;
     }
@@ -940,6 +952,10 @@ button {
       width: 220px;
       height: 300px;
     }
+  }
+
+  &__slide-title,&__slide-subtitle,&__btn{
+    margin-left: 20px;
   }
 
   &__slide-title {
@@ -950,6 +966,7 @@ button {
     line-height: 29px;
     color: $black;
     display: none;
+    margin-top: 20px;
   }
 
   &__slide-subtitle {
@@ -960,6 +977,8 @@ button {
     line-height: 140%;
     color: $text_gray;
     display: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   &__btn {
@@ -989,29 +1008,18 @@ button {
     left: -15px;
   }
 
-  //&__arrows-block{
-  //  position: absolute;
-  //  display: flex;
-  //  right: 15px;
-  //  top: 0;
-  //  width: 85px;
-  //  justify-content: space-between;
-  //
-  //  .button-prev svg{
-  //    transform: rotate(-180deg);
-  //  }
-  //}
-
   @media (min-width: $tablet-small) {
     .swiper-slide-active .team__slide {
-      height: 550px;
       width: 400px;
-      transition: 0.4s ease all;
+      height: auto;
       margin-top: 0;
+      box-shadow: 5px 0 37px -13px grey;
     }
 
     .swiper-slide-active .team__slide img {
       filter: none;
+      min-height: 550px;
+      width: 400px;
     }
   }
 

@@ -1,6 +1,6 @@
 var team = new Swiper('.swiper-team', {
     slidesPerView: 1.2,
-    spaceBetween:20,
+    slideToClickedSlide: true,
     lazy: true,
     loop:true,
     breakpoints: {
@@ -138,25 +138,16 @@ var popups = {
         this.popupImg.toggleClass("opened")
     },
     popupToggler:$(".js-popup-toggler"),
-    menuToggler:$(".js-menu-toggler"),
-}
+    menuToggler:$(".js-menu-toggler")
+};
 
 popups.popupToggler.on("click",function () {
     popups.popupToggle(popups.popup)
-})
+});
 
 popups.menuToggler.on("click",function () {
     popups.popupToggle(popups.menu)
-})
-
-
-for (let i = 1;i< 6;i++) {
-        let slide = ".team .slide"+i;
-    $(slide).on("click", function () {
-        team.slideToLoop(i -1, 500, true);
-
-    })
-}
+});
 
 (function($) {
     $.fn.inputFilter = function(inputFilter) {
@@ -238,17 +229,43 @@ $(".personal-data").on("click",function () {
     }
 })
 
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+function countup(className){
+    var countBlockTop = $("."+className).offset().top;
+    var windowHeight = window.innerHeight;
+    var show = true;
+
+    $(window).scroll( function (){
+        if(show && (countBlockTop < $(window).scrollTop() + windowHeight)){
+            show = false;
+
+            $('.'+className).spincrement({
+                from: 1,
+                duration: 4000,
+            });
+        }
+    })
+}
+$(function() {
+    countup("count");
+});
 
 
-// async function getCity() {
-//     let response = await fetch('/php/sypexgeo.php', {
-//         mode: "no-cors", // same-origin, no-cors
-//         redirect: "follow", // manual, error
-//     });
-//     let answer = await response.text();
-//     if(answer !== 'error') {
-//         $('.main-screen__title span').text('в городе ' + answer);
-//         $('.calculate__city').val(answer);
-//     }
-// }
-// getCity();
+async function getCity() {
+    let response = await fetch('/php/sypexgeo.php', {
+        mode: "no-cors", // same-origin, no-cors
+        redirect: "follow", // manual, error
+    });
+    let answer = await response.text();
+    if(answer !== 'error') {
+        $('.main-screen__title span').text('в городе ' + answer);
+        $('.calculate__city').val(answer);
+    }
+}
+getCity();

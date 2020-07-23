@@ -303,7 +303,7 @@ button {
       order: 1;
     }
 
-    svg,span{
+    svg, span {
       vertical-align: middle;
     }
   }
@@ -343,9 +343,9 @@ button {
     height: 500px;
   }
 
-  &__btn-wrapper{
+  &__btn-wrapper {
     display: flex;
-    @media (max-width: $tablet-small){
+    @media (max-width: $tablet-small) {
       flex-direction: column;
     }
   }
@@ -942,7 +942,6 @@ button {
 
   &__slide {
     width: 320px;
-    height: 450px;
     margin: 45px 0 0 auto;
     padding-bottom: 20px;
     @media (max-width: $tablet-small) {
@@ -950,12 +949,14 @@ button {
     }
     @media (max-width: $phone-big) {
       width: 220px;
-      height: 300px;
     }
   }
 
-  &__slide-title,&__slide-subtitle,&__btn{
+  &__slide-title, &__slide-subtitle, &__btn {
     margin-left: 20px;
+    @media (max-width: $phone-big) {
+      margin-left: 0;
+    }
   }
 
   &__slide-title {
@@ -984,6 +985,11 @@ button {
   &__btn {
     display: none;
     margin-top: 15px;
+    max-width: 100%;
+
+    @media (max-width: $tablet-small) {
+      margin-left: 0;
+    }
   }
 
   &__cite {
@@ -1969,14 +1975,24 @@ button {
 
   &__img {
     position: absolute;
-    left: 50px;
+    left: -265px;
     top: 50%;
     transform: translateY(-50%);
     max-width: 100%;
+
+    @media (max-width: $desktop-small) {
+      width: 600px;
+      left: -200px;
+    }
+
     @media (max-width: $tablet) {
       z-index: -1;
+      width: auto;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    @media (max-width: $phone-big) {
+      display: none;
     }
   }
 
@@ -2024,6 +2040,11 @@ button {
     border: none;
     outline: none;
     margin-right: 20px;
+    @media (max-width: $phone-big) {
+      display: block;
+      width: 250px;
+      margin-right: 0;
+    }
 
   }
 

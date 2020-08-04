@@ -6,7 +6,7 @@ define('SUBJECT',       'Форма организации');
 
 $nameclient = array_key_exists('name', $_POST) ? $_POST['name'] : null;
 $phone = array_key_exists('phone', $_POST) ? $_POST['phone'] : null;
-$roistat = isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : null;	
+$roistat = isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : null;
 
 $form = $_REQUEST;
 
@@ -29,10 +29,10 @@ foreach ($form as $name => $value) {
 }
 
 function AmoSend($nameclient, $phone, $roistat, $comment) {
-  
+
 $roistatData = array(
     'roistat' => $roistat,
-    'key'     => 'MTA2MjUzOjk5NDQ0OmQ4MmVmMWQwMzM2YjkyYmQ5ZWIwMGI5NDBhZjkwNWVi', // Ключ для интеграции с CRM, указывается в настройках интеграции с CRM.
+    'key'     => 'MjA0NjgwZTg1OGI1YmFkOTEyYTg5MWNmNjI5NjY0YTQ6MTY3OTUx', // Ключ для интеграции с CRM, указывается в настройках интеграции с CRM.
     'title'   => 'Заявка с сайта dopusk-sro24.com', // Название сделки
     'comment' => $comment, // Комментарий к сделке
     'name'    => $nameclient, // Имя клиента
@@ -59,7 +59,7 @@ file_get_contents("https://cloud.roistat.com/api/proxy/1.0/leads/add?" . http_bu
 					)
 				)
 			);
-} 
+}
 
 if($message) {
 
@@ -70,7 +70,7 @@ if($message) {
         'Reply-To'  => MAIL_REPLY_TO,
         'X-Mailer'  => 'PHP/' . phpversion()
     );
-	
+
 	AmoSend($nameclient, $phone, $roistat, $message);
     $isSuccess = mail($to, $subject, $message, $headers);
 

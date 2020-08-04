@@ -247,6 +247,11 @@ button {
 .main-header {
   background: white;
   height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 5px 0 37px -13px grey;
+  z-index: 2;
 
   &__wrapper {
     background: white;
@@ -335,7 +340,7 @@ button {
   background: url("../images/main-screen.jpg") no-repeat center;
   background-size: cover;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   @media (max-width: $tablet) {
     height: 600px;
   }
@@ -1568,6 +1573,15 @@ button {
   padding-top: 50px;
 
   &__logo {
+
+    path {
+      fill: white;
+    }
+
+    path:nth-of-type(2), path:last-child {
+      fill: $blue;
+    }
+
     @media (max-width: $desktop-small) {
       width: 100%;
       margin-bottom: 20px;
@@ -1578,6 +1592,15 @@ button {
 
     &--mobile {
       display: none;
+
+      path {
+        fill: white;
+      }
+
+      path:nth-of-type(2), path:last-child {
+        fill: $blue;
+      }
+
       @media (max-width: $tablet-small) {
         display: block;
       }
@@ -1626,9 +1649,6 @@ button {
     flex-grow: 0;
   }
 
-  svg path:nth-of-type(2) {
-    fill: white;
-  }
 
   &__contact {
     font-family: Inter;
@@ -1915,7 +1935,7 @@ button {
     }
 
     svg.opened {
-      width: 400px;
+      width: 430px;
       transition: 0.5s ease-in-out all;
       opacity: 1;
     }
